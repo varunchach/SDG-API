@@ -1,17 +1,17 @@
 # Live generator — on-the-fly customers + CSV export
 
-Separate from the demo app (`hdfc-eligibility-engine`). Demo deployment is untouched.
+Separate from the demo app (`sdg-eligibility-engine`). Demo deployment is untouched.
 
 ## Deploy
 
 ```bash
 oc apply -f openshift/deploy-live.yaml
 BUILDER_SECRET=$(oc get sa builder -o jsonpath='{.secrets[?(@.type=="kubernetes.io/dockercfg")].name}')
-oc patch buildconfig hdfc-eligibility-live --type=merge \
+oc patch buildconfig sdg-eligibility-live --type=merge \
   -p "{\"spec\":{\"output\":{\"pushSecret\":{\"name\":\"$BUILDER_SECRET\"}}}}"
-oc start-build hdfc-eligibility-live --from-dir=. --follow
-oc rollout restart deployment/hdfc-eligibility-live
-oc get route hdfc-eligibility-live -o jsonpath='https://{.spec.host}{"\n"}'
+oc start-build sdg-eligibility-live --from-dir=. --follow
+oc rollout restart deployment/sdg-eligibility-live
+oc get route sdg-eligibility-live -o jsonpath='https://{.spec.host}{"\n"}'
 ```
 
 ## CSV storage

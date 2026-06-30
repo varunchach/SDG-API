@@ -1,4 +1,4 @@
-# HDFC Eligibility Engine POC — Approach & Architecture
+# Eligibility Engine POC — Approach & Architecture
 
 **Purpose:** Mock Producer API for loan eligibility testing — synthetic customer data, EE spec-compliant JSON, and async producer callbacks (CIBIL, Perfios, Posidex, Hunter, Summary).
 
@@ -12,7 +12,7 @@
 
 ### What we simulate
 
-HDFC’s Eligibility Engine sits between a **Partner** (loan origination channel) and multiple **producer systems** (bureau, income, dedupe, fraud). The Partner sends an **Initiate Journey** request; the Engine returns a synchronous **ACK**, then delivers **async callbacks** as each producer completes.
+The Eligibility Engine sits between a **Partner** (loan origination channel) and multiple **producer systems** (bureau, income, dedupe, fraud). The Partner sends an **Initiate Journey** request; the Engine returns a synchronous **ACK**, then delivers **async callbacks** as each producer completes.
 
 This POC does **not** call real bureaus or bank systems. Instead it:
 
@@ -45,7 +45,7 @@ flowchart TB
         UI_LIVE["Live UI\n(Name + DOB + PAN)"]
     end
 
-    subgraph POC["HDFC Eligibility Engine POC"]
+    subgraph POC["Eligibility Engine POC"]
         API_DEMO["Demo API\nsrc/api/main.py"]
         API_LIVE["Live API\nsrc/api_live/main.py"]
         GEN["Synthetic Generators\nsrc/generators/"]

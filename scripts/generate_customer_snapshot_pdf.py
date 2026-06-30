@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -14,10 +15,10 @@ sys.path.insert(0, str(ROOT))
 
 from src.generators.spec_templates import load_spec_initiate_request
 
-OUT = ROOT / "docs" / "customer" / "HDFC_Eligibility_Engine_POC_Snapshot.pdf"
+OUT = ROOT / "docs" / "customer" / "SDG_Eligibility_Engine_POC_Snapshot.pdf"
 CURL_SH = ROOT / "docs" / "customer" / "generate-callbacks-curl.sh"
 
-BASE = "https://hdfc-eligibility-live-default.apps.ocp.kxxfq.sandbox565.opentlc.com"
+BASE = os.environ.get("BASE_URL", "http://localhost:8081")
 POST_URL = f"{BASE}/api/eligibility/generate-callbacks?scenario=clean-approval"
 
 LINK = (0, 102, 204)
@@ -136,7 +137,7 @@ def build_pdf() -> Path:
     _reset_x(pdf)
     pdf.set_font("Helvetica", "B", 16)
     pdf.set_text_color(*BODY)
-    pdf.cell(0, 10, "HDFC Eligibility Engine", new_x="LMARGIN", new_y="NEXT", align="C")
+    pdf.cell(0, 10, "SDG Eligibility Engine", new_x="LMARGIN", new_y="NEXT", align="C")
 
     _reset_x(pdf)
     pdf.set_font("Helvetica", "", 12)
@@ -151,7 +152,7 @@ def build_pdf() -> Path:
     _heading(pdf, "1. Overview")
     _body(
         pdf,
-        "Mock Producer API simulating the HDFC Eligibility Engine loan journey. "
+        "Mock Producer API simulating the Eligibility Engine loan journey. "
         "Not connected to real bureau, Perfios, Posidex, or Hunter systems.",
     )
     _body(pdf, "Flow: Partner POSTs EE initiate JSON -> ACK + producer callbacks (mock).")

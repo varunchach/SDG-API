@@ -1,10 +1,8 @@
-# SDG-API — HDFC Eligibility Engine Mock Producer
+# SDG-API — Eligibility Engine Mock Producer
 
-Synthetic data generator and **mock Producer API** for HDFC Eligibility Engine loan-journey testing. Accepts EE-spec **Initiate Journey** JSON, returns synchronous **ACK**, and generates **producer callbacks** (CIBIL, Equifax, High Mark, Perfios, Posidex, Hunter, Summary).
+Synthetic data generator and **mock Producer API** for loan eligibility journey testing. Accepts EE-spec **Initiate Journey** JSON, returns synchronous **ACK**, and generates **producer callbacks** (CIBIL, Equifax, High Mark, Perfios, Posidex, Hunter, Summary).
 
 All data is **synthetic** — no real bureau, Perfios, Posidex, or Hunter integration.
-
-**Live POC (public):** https://hdfc-eligibility-live-default.apps.ocp.kxxfq.sandbox565.opentlc.com
 
 ---
 
@@ -54,7 +52,7 @@ All data is **synthetic** — no real bureau, Perfios, Posidex, or Hunter integr
 | App | Entry point | Purpose |
 |-----|-------------|---------|
 | **Demo** | `src/api/main.py` | Preloaded customer records, demo UI |
-| **Live** | `src/api_live/main.py` | On-the-fly generation, sync APIs, CSV export, customer-facing POC |
+| **Live** | `src/api_live/main.py` | On-the-fly generation, sync APIs, CSV export |
 
 ---
 
@@ -127,15 +125,12 @@ SDG-API/
 ## Local Setup
 
 ```bash
-# Clone
 git clone https://github.com/varunchach/SDG-API.git
 cd SDG-API
 
-# Virtual environment
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 
-# Install dependencies
 pip install -r requirements-live.txt   # Live API (recommended)
 # or
 pip install -r requirements.txt        # Demo API only
@@ -145,7 +140,7 @@ pip install -r requirements.txt        # Demo API only
 
 ## Run Locally
 
-### Live API (recommended — sync producer + customer endpoints)
+### Live API (recommended)
 
 ```bash
 source .venv/bin/activate
@@ -158,12 +153,10 @@ uvicorn src.api_live.main:app --host 0.0.0.0 --port 8081
 | Swagger | http://localhost:8081/docs |
 | Health | http://localhost:8081/api/health |
 
-### Demo API (preloaded records)
+### Demo API
 
 ```bash
-# Generate batch first (optional — demo can bake records at build time)
-python scripts/generate_customers.py -n 100 --seed 42
-
+python scripts/generate_customers.py -n 100 --seed 42   # optional
 python scripts/run_server.py    # http://localhost:8000
 ```
 
@@ -197,55 +190,58 @@ python scripts/run_server.py    # http://localhost:8000
 
 **All producers (`generate-callbacks`):** POST raw EE initiate JSON (from `EE- initiate request V1.0.txt`).
 
-```json
-{
-  "contextParameter": { "partnerJourneyID", "bankJourneyID", "partnerID", "channelID", "productName" },
-  "applicant": {
-    "customerDemog": { "name", "dob", "ids": { "panNo" }, ... },
-    "bankingDetails": { ... },
-    "productDetails": { "multibureau", "perfios", "posidex", "hunter" }
-  },
-  "coApplicants": { ... },
-  "sourceApp": { "constitution": "" }
-}
-```
-
-- `productDetails` is under **`applicant`**, not at root
-- Do **not** include `orcJourneyID` in the initiate request
-
-**Single producer (`/api/producer/mbCibil` etc.):** wrap in:
+**Single producer (`/api/producer/mbCibil` etc.):**
 
 ```json
 { "scenario": "clean-approval", "initiateRequest": { ... } }
 ```
 
+- `productDetails` is under **`applicant`**, not at root
+- Do **not** include `orcJourneyID` in the initiate request
+
 ---
 
 ## Sample curl Commands
 
+Set your base URL (local or deployed route):
+
+```bash
+export BASE_URL=http://localhost:8081
+# after OpenShift deploy:
+# export BASE_URL=https://$(oc get route sdg-eligibility-live -o jsonpath='{.spec.host}')
+```
+
 ### Health
 
 ```bash
-curl -s https://hdfc-eligibility-live-default.apps.ocp.kxxfq.sandbox565.opentlc.com/api/health
+curl -s "$BASE_URL/api/health"
 ```
 
-### All producers (inline EE initiate JSON)
-
-See [`docs/customer/generate-callbacks-curl.sh`](docs/customer/generate-callbacks-curl.sh) or run:
+### All producers
 
 ```bash
 bash docs/customer/generate-callbacks-curl.sh
 ```
 
+Or pipe the spec sample:
+
+```bash
+curl -s "$BASE_URL/api/samples/ee-initiate-request" \
+| curl -s -X POST "$BASE_URL/api/eligibility/generate-callbacks?scenario=clean-approval" \
+  -H "Content-Type: application/json" -d @-
+```
+
 ### CIBIL only
 
 ```bash
-curl -X POST "https://hdfc-eligibility-live-default.apps.ocp.kxxfq.sandbox565.opentlc.com/api/producer/mbCibil" \
+curl -X POST "$BASE_URL/api/producer/mbCibil" \
   -H "Content-Type: application/json" \
   -d '{"scenario":"clean-approval","initiateRequest":{...}}'
 ```
 
-Full inline body is in customer docs / email templates. Sample identity:
+Full inline body: [`docs/customer/generate-callbacks-curl.sh`](docs/customer/generate-callbacks-curl.sh)
+
+Sample identity (spec sample):
 
 | Field | Value |
 |-------|-------|
@@ -270,8 +266,6 @@ Full inline body is in customer docs / email templates. Sample identity:
 
 ## Scenarios
 
-Configured in `data/scenarios/`. Pass via query `?scenario=` or in request body.
-
 | Scenario | Typical behaviour |
 |----------|-------------------|
 | `clean-approval` | All producers pass; high CIBIL score |
@@ -295,73 +289,57 @@ Output: `data/generated/customers-batch.json` (gitignored)
 ## Validation & Smoke Tests
 
 ```bash
-# Full spec validation (template fill + constraints)
 python scripts/smoke_validate_spec.py
-
-# Template fill audit
 python scripts/audit_template_fill.py --strict
-
-# Constraint audit
 python scripts/audit_constraints.py
 ```
 
-Regenerate customer PDF snapshot:
+Regenerate customer PDF:
 
 ```bash
-pip install fpdf2 python-docx   # one-time, for doc scripts
+pip install fpdf2 python-docx
 python scripts/generate_customer_snapshot_pdf.py
 ```
 
-Output: `docs/customer/HDFC_Eligibility_Engine_POC_Snapshot.pdf`
+Output: `docs/customer/SDG_Eligibility_Engine_POC_Snapshot.pdf`
 
 ---
 
 ## Deploy to OpenShift
 
-### Live API (customer-facing POC)
+### Live API
 
 ```bash
-oc login
-oc project default
-
 oc apply -f openshift/deploy-live.yaml
-
 BUILDER_SECRET=$(oc get sa builder -o jsonpath='{.secrets[?(@.type=="kubernetes.io/dockercfg")].name}')
-oc patch buildconfig hdfc-eligibility-live --type=merge \
+oc patch buildconfig sdg-eligibility-live --type=merge \
   -p "{\"spec\":{\"output\":{\"pushSecret\":{\"name\":\"$BUILDER_SECRET\"}}}}"
-
-oc start-build hdfc-eligibility-live --from-dir=. --follow
-oc rollout restart deployment/hdfc-eligibility-live
-
-oc get route hdfc-eligibility-live -o jsonpath='https://{.spec.host}{"\n"}'
+oc start-build sdg-eligibility-live --from-dir=. --follow
+oc rollout restart deployment/sdg-eligibility-live
+oc get route sdg-eligibility-live -o jsonpath='https://{.spec.host}{"\n"}'
 ```
 
-See [`openshift/README-live.md`](openshift/README-live.md) for CSV/S3 storage options.
+See [`openshift/README-live.md`](openshift/README-live.md).
 
 ### Demo API
 
 ```bash
 oc apply -f openshift/deploy.yaml
-oc start-build hdfc-eligibility-engine --from-dir=. --follow
-oc rollout restart deployment/hdfc-eligibility-engine
-oc get route hdfc-eligibility-engine -o jsonpath='https://{.spec.host}{"\n"}'
+oc start-build sdg-eligibility-engine --from-dir=. --follow
+oc rollout restart deployment/sdg-eligibility-engine
+oc get route sdg-eligibility-engine -o jsonpath='https://{.spec.host}{"\n"}'
 ```
 
-See [`openshift/README.md`](openshift/README.md) for redeploy steps.
+See [`openshift/README.md`](openshift/README.md).
 
 ### Docker (local)
 
 ```bash
-# Live
 docker build -f Dockerfile.live -t sdg-api-live .
 docker run -p 8080:8080 sdg-api-live
-
-# Demo
-docker build -f Dockerfile -t sdg-api-demo .
-docker run -p 8080:8080 sdg-api-demo
 ```
 
-**Note:** `EligibilityEngine_SpecDoc_SampleFiles/` must be included in the image (required at runtime for callback generation).
+**Note:** `EligibilityEngine_SpecDoc_SampleFiles/` must be included in the image.
 
 ---
 
@@ -373,7 +351,6 @@ docker run -p 8080:8080 sdg-api-demo
 | `EligibilityEngine_SpecDoc_SampleFiles/EE - Intiate Journey ACK resp.txt` | ACK response |
 | `EligibilityEngine_SpecDoc_SampleFiles/* Sample Callback.txt` | Producer callback shapes |
 | `EligibilityEngine_SpecDoc_SampleFiles/Requirement_MockAPI.txt` | Mock API requirements |
-| `ACE BRE Generic API Spec.pdf` | BRE reference |
 
 ---
 
@@ -381,15 +358,14 @@ docker run -p 8080:8080 sdg-api-demo
 
 | Document | Location |
 |----------|----------|
-| Architecture (detailed) | [`docs/EligibilityEngine_Approach_and_Architecture.md`](docs/EligibilityEngine_Approach_and_Architecture.md) |
-| Customer snapshot PDF | [`docs/customer/HDFC_Eligibility_Engine_POC_Snapshot.pdf`](docs/customer/HDFC_Eligibility_Engine_POC_Snapshot.pdf) |
-| Client Q&A | [`docs/EligibilityEngine_Understanding_and_Client_Questions.txt`](docs/EligibilityEngine_Understanding_and_Client_Questions.txt) |
+| Architecture | [`docs/EligibilityEngine_Approach_and_Architecture.md`](docs/EligibilityEngine_Approach_and_Architecture.md) |
+| Customer snapshot | [`docs/customer/SDG_Eligibility_Engine_POC_Snapshot.pdf`](docs/customer/SDG_Eligibility_Engine_POC_Snapshot.pdf) |
 | OpenShift live deploy | [`openshift/README-live.md`](openshift/README-live.md) |
 | OpenShift demo deploy | [`openshift/README.md`](openshift/README.md) |
-| Agent / skill index | [`AGENTS.md`](AGENTS.md) |
+| Agent index | [`AGENTS.md`](AGENTS.md) |
 
 ---
 
 ## License & Disclaimer
 
-POC / demo software. Synthetic data only. Not for production credit decisions. Public deployment has no API authentication — harden before any production use.
+POC / demo software. Synthetic data only. Not for production credit decisions.

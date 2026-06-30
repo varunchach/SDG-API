@@ -5,24 +5,24 @@
 After deploy, get the route:
 
 ```bash
-oc get route hdfc-eligibility-engine -o jsonpath='https://{.spec.host}{"\n"}'
+oc get route sdg-eligibility-engine -o jsonpath='https://{.spec.host}{"\n"}'
 ```
 
 ## First-time deploy
 
 ```bash
 oc login   # already done
-oc project default   # or: oc new-project hdfc-eligibility
+oc project default   # or: oc new-project sdg-eligibility
 oc apply -f openshift/deploy.yaml
-oc start-build hdfc-eligibility-engine --from-dir=. --follow
-oc rollout restart deployment/hdfc-eligibility-engine
+oc start-build sdg-eligibility-engine --from-dir=. --follow
+oc rollout restart deployment/sdg-eligibility-engine
 ```
 
 ## Redeploy after code changes
 
 ```bash
-oc start-build hdfc-eligibility-engine --from-dir=. --follow
-oc rollout restart deployment/hdfc-eligibility-engine
+oc start-build sdg-eligibility-engine --from-dir=. --follow
+oc rollout restart deployment/sdg-eligibility-engine
 ```
 
 ## Notes

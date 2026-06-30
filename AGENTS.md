@@ -1,4 +1,4 @@
-# HDFC Bank POC — Eligibility Engine
+# SDG-API — Eligibility Engine
 
 Synthetic data tool + mock Producer API for loan eligibility testing.
 
@@ -32,8 +32,8 @@ Output: `data/generated/` (gitignored — run script to create)
 
 ```bash
 oc apply -f openshift/deploy.yaml
-oc start-build hdfc-eligibility-engine --from-dir=. --follow
-oc get route hdfc-eligibility-engine -o jsonpath='https://{.spec.host}{"\n"}'
+oc start-build sdg-eligibility-engine --from-dir=. --follow
+oc get route sdg-eligibility-engine -o jsonpath='https://{.spec.host}{"\n"}'
 ```
 
 See `openshift/README.md` for redeploy steps.

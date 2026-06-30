@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[2]
 UI_DIR = ROOT / "ui"
 
 app = FastAPI(
-    title="HDFC Eligibility Engine — Mock Producer",
+    title="SDG Eligibility Engine — Mock Producer",
     description="Partner Initiate → sync ACK → async producer callbacks → Summary",
     version="0.1.0",
 )

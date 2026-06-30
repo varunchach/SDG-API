@@ -10,8 +10,8 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Pt
 
 ROOT = Path(__file__).resolve().parents[1]
-TXT = ROOT / "docs" / "customer" / "HDFC_Eligibility_Engine_POC_Snapshot.txt"
-DOCX = ROOT / "docs" / "customer" / "HDFC_Eligibility_Engine_POC_Snapshot.docx"
+TXT = ROOT / "docs" / "customer" / "SDG_Eligibility_Engine_POC_Snapshot.txt"
+DOCX = ROOT / "docs" / "customer" / "SDG_Eligibility_Engine_POC_Snapshot.docx"
 
 
 def main() -> None:
@@ -21,7 +21,7 @@ def main() -> None:
     style.font.name = "Calibri"
     style.font.size = Pt(11)
 
-    title = doc.add_paragraph("HDFC Eligibility Engine — Mock Producer API (POC)")
+    title = doc.add_paragraph("SDG Eligibility Engine — Mock Producer API (POC)")
     title.runs[0].bold = True
     title.runs[0].font.size = Pt(16)
     title.alignment = WD_ALIGN_PARAGRAPH.CENTER

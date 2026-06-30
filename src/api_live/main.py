@@ -40,7 +40,7 @@ ROOT = Path(__file__).resolve().parents[2]
 UI_DIR = ROOT / "ui_live"
 
 app = FastAPI(
-    title="HDFC Eligibility Engine — Live Generator",
+    title="SDG Eligibility Engine — Live Generator",
     description="On-the-fly initiateRequest → ACK → callbacks → CSV export",
     version="1.3.0",
 )

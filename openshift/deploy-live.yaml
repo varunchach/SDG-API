@@ -6,15 +6,15 @@ items:
   - apiVersion: image.openshift.io/v1
     kind: ImageStream
     metadata:
-      name: hdfc-eligibility-live
+      name: sdg-eligibility-live
       labels:
-        app: hdfc-eligibility-live
+        app: sdg-eligibility-live
   - apiVersion: build.openshift.io/v1
     kind: BuildConfig
     metadata:
-      name: hdfc-eligibility-live
+      name: sdg-eligibility-live
       labels:
-        app: hdfc-eligibility-live
+        app: sdg-eligibility-live
     spec:
       source:
         type: Binary
@@ -25,14 +25,14 @@ items:
       output:
         to:
           kind: DockerImage
-          name: image-registry.openshift-image-registry.svc:5000/default/hdfc-eligibility-live:latest
+          name: image-registry.openshift-image-registry.svc:5000/default/sdg-eligibility-live:latest
       triggers: []
   - apiVersion: v1
     kind: PersistentVolumeClaim
     metadata:
-      name: hdfc-eligibility-live-csv
+      name: sdg-eligibility-live-csv
       labels:
-        app: hdfc-eligibility-live
+        app: sdg-eligibility-live
     spec:
       accessModes:
         - ReadWriteOnce
@@ -42,22 +42,22 @@ items:
   - apiVersion: apps/v1
     kind: Deployment
     metadata:
-      name: hdfc-eligibility-live
+      name: sdg-eligibility-live
       labels:
-        app: hdfc-eligibility-live
+        app: sdg-eligibility-live
     spec:
       replicas: 1
       selector:
         matchLabels:
-          app: hdfc-eligibility-live
+          app: sdg-eligibility-live
       template:
         metadata:
           labels:
-            app: hdfc-eligibility-live
+            app: sdg-eligibility-live
         spec:
           containers:
             - name: app
-              image: image-registry.openshift-image-registry.svc:5000/default/hdfc-eligibility-live:latest
+              image: image-registry.openshift-image-registry.svc:5000/default/sdg-eligibility-live:latest
               imagePullPolicy: Always
               ports:
                 - containerPort: 8080
@@ -93,16 +93,16 @@ items:
           volumes:
             - name: csv-data
               persistentVolumeClaim:
-                claimName: hdfc-eligibility-live-csv
+                claimName: sdg-eligibility-live-csv
   - apiVersion: v1
     kind: Service
     metadata:
-      name: hdfc-eligibility-live
+      name: sdg-eligibility-live
       labels:
-        app: hdfc-eligibility-live
+        app: sdg-eligibility-live
     spec:
       selector:
-        app: hdfc-eligibility-live
+        app: sdg-eligibility-live
       ports:
         - name: http
           port: 8080
@@ -110,13 +110,13 @@ items:
   - apiVersion: route.openshift.io/v1
     kind: Route
     metadata:
-      name: hdfc-eligibility-live
+      name: sdg-eligibility-live
       labels:
-        app: hdfc-eligibility-live
+        app: sdg-eligibility-live
     spec:
       to:
         kind: Service
-        name: hdfc-eligibility-live
+        name: sdg-eligibility-live
       port:
         targetPort: http
       tls:

@@ -1,10 +1,10 @@
-HDFC ELIGIBILITY ENGINE — MOCK PRODUCER API (POC)
-Customer Snapshot | March 2026
+SDG ELIGIBILITY ENGINE — MOCK PRODUCER API (POC)
+Customer Snapshot | 2026
 ================================================================================
 
 1. OVERVIEW
 -----------
-Mock Producer API simulating the HDFC Eligibility Engine loan journey.
+Mock Producer API simulating the Eligibility Engine loan journey.
 Synthetic data only — not connected to real bureau / Perfios / Posidex / Hunter.
 
   Partner POSTs EE initiate JSON  →  ACK + producer callbacks (mock)
@@ -14,8 +14,11 @@ Synthetic data only — not connected to real bureau / Perfios / Posidex / Hunte
 
 2. PUBLIC ACCESS (no OpenShift login required)
 ---------------------------------------------
-Base URL:
-  https://hdfc-eligibility-live-default.apps.ocp.kxxfq.sandbox565.opentlc.com
+Base URL (local default):
+  http://localhost:8081
+
+After OpenShift deploy:
+  oc get route sdg-eligibility-live -o jsonpath='https://{.spec.host}{"\n"}'
 
 Web UI:     {base}/
 Swagger:    {base}/docs
@@ -43,39 +46,31 @@ Journey IDs (sample):
 
 4. REQUEST FORMAT
 -----------------
-  • POST raw EE initiate JSON as body (see sample endpoint above)
-  • productDetails is under applicant (not at root)
-  • Do NOT send orcJourneyID in the request
-  • Optional: ?scenario=clean-approval
+  - POST raw EE initiate JSON as body (see sample endpoint above)
+  - productDetails is under applicant (not at root)
+  - Do NOT send orcJourneyID in the request
+  - Optional: ?scenario=clean-approval
     (thin-file | fraud-hit | posidex-match | bureau-not-found)
 
 
 5. QUICK TESTS
 --------------
 Health:
-  curl https://hdfc-eligibility-live-default.apps.ocp.kxxfq.sandbox565.opentlc.com/api/health
-
-Download sample initiate JSON:
-  curl https://hdfc-eligibility-live-default.apps.ocp.kxxfq.sandbox565.opentlc.com/api/samples/ee-initiate-request
+  curl http://localhost:8081/api/health
 
 Generate callbacks (direct POST - full EE initiate JSON body):
 
-  curl -X POST "https://hdfc-eligibility-live-default.apps.ocp.kxxfq.sandbox565.opentlc.com/api/eligibility/generate-callbacks?scenario=clean-approval" \
-    -H "Content-Type: application/json" \
-    -d '<full JSON from EE- initiate request V1.0.txt>'
-
-  Complete copy-paste command: see generate-callbacks-curl.sh in this folder,
-  or Appendix A in the PDF.
+  bash docs/customer/generate-callbacks-curl.sh
 
 Expected: ACK + 8 callbacks; PAN/name/DOB match initiate request.
 
 
 6. NOTES
 --------
-  • POC environment — public URL, no API auth (not for production)
-  • Input spec:  EE- initiate request V1.0.txt
-  • Output specs: producer callback sample .txt files in EE spec pack
-  • Async mode: POST /api/journey/initiate (~3s between callbacks)
+  - POC environment — configure auth before production use
+  - Input spec: EE- initiate request V1.0.txt
+  - Output specs: producer callback sample files in EE spec pack
+  - Async mode: POST {base}/api/journey/initiate (~3s between callbacks)
 
 ================================================================================
 End of document

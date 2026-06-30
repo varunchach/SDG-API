@@ -6,15 +6,15 @@ items:
   - apiVersion: image.openshift.io/v1
     kind: ImageStream
     metadata:
-      name: hdfc-eligibility-engine
+      name: sdg-eligibility-engine
       labels:
-        app: hdfc-eligibility-engine
+        app: sdg-eligibility-engine
   - apiVersion: build.openshift.io/v1
     kind: BuildConfig
     metadata:
-      name: hdfc-eligibility-engine
+      name: sdg-eligibility-engine
       labels:
-        app: hdfc-eligibility-engine
+        app: sdg-eligibility-engine
     spec:
       source:
         type: Binary
@@ -25,27 +25,27 @@ items:
       output:
         to:
           kind: ImageStreamTag
-          name: hdfc-eligibility-engine:latest
+          name: sdg-eligibility-engine:latest
       triggers: []
   - apiVersion: apps/v1
     kind: Deployment
     metadata:
-      name: hdfc-eligibility-engine
+      name: sdg-eligibility-engine
       labels:
-        app: hdfc-eligibility-engine
+        app: sdg-eligibility-engine
     spec:
       replicas: 1
       selector:
         matchLabels:
-          app: hdfc-eligibility-engine
+          app: sdg-eligibility-engine
       template:
         metadata:
           labels:
-            app: hdfc-eligibility-engine
+            app: sdg-eligibility-engine
         spec:
           containers:
             - name: app
-              image: image-registry.openshift-image-registry.svc:5000/default/hdfc-eligibility-engine:latest
+              image: image-registry.openshift-image-registry.svc:5000/default/sdg-eligibility-engine:latest
               imagePullPolicy: Always
               ports:
                 - containerPort: 8080
@@ -75,12 +75,12 @@ items:
   - apiVersion: v1
     kind: Service
     metadata:
-      name: hdfc-eligibility-engine
+      name: sdg-eligibility-engine
       labels:
-        app: hdfc-eligibility-engine
+        app: sdg-eligibility-engine
     spec:
       selector:
-        app: hdfc-eligibility-engine
+        app: sdg-eligibility-engine
       ports:
         - name: http
           port: 8080
@@ -88,13 +88,13 @@ items:
   - apiVersion: route.openshift.io/v1
     kind: Route
     metadata:
-      name: hdfc-eligibility-engine
+      name: sdg-eligibility-engine
       labels:
-        app: hdfc-eligibility-engine
+        app: sdg-eligibility-engine
     spec:
       to:
         kind: Service
-        name: hdfc-eligibility-engine
+        name: sdg-eligibility-engine
       port:
         targetPort: http
       tls:
