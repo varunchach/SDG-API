@@ -1,0 +1,26 @@
+{
+  "name": "posidex-match",
+  "description": "Posidex dedupe match on NAME,PAN",
+  "mbCibil": {
+    "score": "720",
+    "subjectReturnCode": "FOUND"
+  },
+  "mbEquifax": {
+    "errorMsg": ""
+  },
+  "mbHighMark": {
+    "statusIq": "SUCCESS"
+  },
+  "posidex": {
+    "matchCount": 2,
+    "soaStatus": "Match"
+  },
+  "hunter": {
+    "matches": "0",
+    "totalMatchScore": "0"
+  },
+  "perfios": {
+    "grade": "AAA",
+    "medianSalary": "45000"
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HDFC Eligibility Engine — Live Generator</title>
+  <link rel="stylesheet" href="/ui/style.css" />
+</head>
+<body>
+  <header>
+    <h1>HDFC Eligibility Engine — Live <span class="badge">LIVE</span></h1>
+    <p>Enter name, DOB &amp; PAN → build EE initiate request → submit for producer callbacks</p>
+  </header>
+
+  <div class="layout">
+    <section class="panel" id="input-panel">
+      <div class="panel-header">Step 1 — Applicant Identity</div>
+      <div class="panel-body">
+        <div id="error-banner" class="error-banner"></div>
+        <div id="storage-info" class="info-bar">Loading storage config…</div>
+
+        <p class="step-hint">Enter only the three identity fields below. All other EE request details (address, mobile, employment, co-applicant, journey IDs) are synthesized automatically.</p>
+
+        <div class="field-grid">
+          <div class="field full">
+            <label for="fullName">Name</label>
+            <input id="fullName" type="text" placeholder="e.g. PRANAV SANTOSH" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="dob">DOB (YYYY-MM-DD)</label>
+            <input id="dob" type="date" />
+          </div>
+          <div class="field">
+            <label for="panNo">PAN</label>
+            <input id="panNo" type="text" maxlength="10" placeholder="QAZPC8801X" autocapitalize="characters" />
+          </div>
+          <div class="field">
+            <label for="scenario">Scenario (callback behaviour)</label>
+            <select id="scenario"></select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="btn-build" class="btn-primary">Build EE Request</button>
+        </div>
+      </div>
+
+      <div class="panel-header panel-header-step2 hidden" id="step2-header">Step 2 — Generated EE Initiate Request</div>
+      <div class="panel-body hidden" id="step2-body">
+        <div id="generated-summary" class="generated-summary"></div>
+
+        <div class="field full">
+          <label for="json-editor">Full initiateRequest JSON (spec format)</label>
+          <textarea id="json-editor" class="json-editor" readonly></textarea>
+        </div>
+
+        <p id="delay-hint" style="font-size:0.78rem;color:var(--muted);margin:0.75rem 0 0"></p>
+
+        <div class="actions">
+          <button type="button" id="btn-submit" class="btn-primary" disabled>Submit Initiate → Run Callbacks</button>
+          <button type="button" id="btn-download-json" class="btn-secondary hidden">Download Initiate JSON</button>
+          <button type="button" id="btn-rebuild" class="btn-secondary">Rebuild</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="response-panel">
+      <div class="panel-header">Eligibility Engine Response</div>
+      <div class="panel-body">
+        <p style="color:var(--muted);font-size:0.9rem">
+          <strong>1.</strong> Enter <strong>Name</strong>, <strong>DOB</strong>, and <strong>PAN</strong><br>
+          <strong>2.</strong> Click <strong>Build EE Request</strong> — review synthetic address, mobile, loan, co-applicant<br>
+          <strong>3.</strong> Click <strong>Submit Initiate</strong> — sync ACK, then async callbacks<br>
+          <strong>4.</strong> After completion — <strong>Download CSV</strong> or <strong>Download Journey JSON</strong>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>

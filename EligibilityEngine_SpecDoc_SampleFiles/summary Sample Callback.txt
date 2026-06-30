@@ -1,0 +1,61 @@
+{
+    "contextParameter": {
+        "partnerJourneyID": "test_1234556789019911",
+        "bankJourneyID": "test_123455678911299125",
+        "partnerID": "FYNDNA",
+        "channelID": "CHANNEL_FYNDNA_HL1",
+        "productName": "FYNDNA_HL1"
+    },
+    "statusCode": "0",
+    "statusMsg": "Success",
+    "reportType": "summary",
+    "applicant": {
+        "summary": {
+            "mbCibil": "Success/Failed/Late/Not Opted",
+            "mbEquifax": "Success/Failed/Late/Not Opted",
+            "mbHighMark": "Success/Failed/Late/Not Opted",
+            "mbEot": "Success/Failed/Late/Not Opted",
+            "mbMergedScore": "Success/Failed/Late/Not Opted",
+            "mbExperian": "Success/Failed/Late/Not Opted",
+            "mbCriflite": "Success/Failed/Late/Not Opted",
+            "perfios": "Success/Failed/Late/Not Opted",
+            "posidex": "Success/Failed/Late/Not Opted",
+            "hunter": "Success/Failed/Late/Not Opted"
+        }
+    },
+    "coApplicants": {
+        "totalCoApplicants": "2",
+        "coApplicantArray": [
+            {
+                "index": "1",
+                "summary": {
+                    "mbCibil": "Success/Failed/Late/Not Opted",
+                    "mbEquifax": "Success/Failed/Late/Not Opted",
+                    "mbHighMark": "Success/Failed/Late/Not Opted",
+                    "mbEot": "Success/Failed/Late/Not Opted",
+                    "mbMergedScore": "Success/Failed/Late/Not Opted",
+                    "mbExperian": "Success/Failed/Late/Not Opted",
+                    "mbCriflite": "Success/Failed/Late/Not Opted",
+                    "perfios": "Success/Failed/Late/Not Opted",
+                    "posidex": "Success/Failed/Late/Not Opted",
+                    "hunter": "Success/Failed/Late/Not Opted"
+                }
+            },
+            {
+                "index": "2",
+                "summary": {
+                    "mbCibil": "Success/Failed/Late/Not Opted",
+                    "mbEquifax": "Success/Failed/Late/Not Opted",
+                    "mbHighMark": "Success/Failed/Late/Not Opted",
+                    "mbEot": "Success/Failed/Late/Not Opted",
+                    "mbMergedScore": "Success/Failed/Late/Not Opted",
+                    "mbExperian": "Success/Failed/Late/Not Opted",
+                    "mbCriflite": "Success/Failed/Late/Not Opted",
+                    "perfios": "Success/Failed/Late/Not Opted",
+                    "posidex": "Success/Failed/Late/Not Opted",
+                    "hunter": "Success/Failed/Late/Not Opted"
+                }
+            }
+        ]
+    }
+}

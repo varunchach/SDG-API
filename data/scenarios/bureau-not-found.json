@@ -1,0 +1,26 @@
+{
+  "name": "bureau-not-found",
+  "description": "Equifax consumer record not found",
+  "mbCibil": {
+    "score": "742",
+    "subjectReturnCode": "FOUND"
+  },
+  "mbEquifax": {
+    "errorMsg": "Consumer record not found"
+  },
+  "mbHighMark": {
+    "statusIq": "SUCCESS"
+  },
+  "posidex": {
+    "matchCount": 0,
+    "soaStatus": "No Match"
+  },
+  "hunter": {
+    "matches": "0",
+    "totalMatchScore": "0"
+  },
+  "perfios": {
+    "grade": "AAA",
+    "medianSalary": "40750"
+  }
+}

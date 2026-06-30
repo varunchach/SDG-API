@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HDFC Eligibility Engine — Mock Producer</title>
+  <link rel="stylesheet" href="/ui/style.css" />
+</head>
+<body>
+  <header>
+    <h1>HDFC Eligibility Engine — Mock Producer</h1>
+    <p>Partner Initiate → sync ACK → async producer callbacks → Summary</p>
+  </header>
+
+  <div class="layout">
+    <section class="panel" id="input-panel">
+      <div class="panel-header">Initiate Request (Partner Input)</div>
+      <div class="panel-body">
+        <div id="error-banner" class="error-banner"></div>
+
+        <div class="field full" style="margin-bottom:0.75rem">
+          <label for="record-select">Load from generated record</label>
+          <select id="record-select"></select>
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="scenario">Scenario (behaviour)</label>
+            <select id="scenario"></select>
+          </div>
+          <div class="field">
+            <label for="partnerJourneyID">partnerJourneyID</label>
+            <input id="partnerJourneyID" type="text" placeholder="12-digit" />
+          </div>
+          <div class="field">
+            <label for="bankJourneyID">bankJourneyID</label>
+            <input id="bankJourneyID" type="text" placeholder="11-digit" />
+          </div>
+          <div class="field">
+            <label for="fName">fName</label>
+            <input id="fName" type="text" />
+          </div>
+          <div class="field">
+            <label for="mName">mName</label>
+            <input id="mName" type="text" />
+          </div>
+          <div class="field">
+            <label for="lName">lName</label>
+            <input id="lName" type="text" />
+          </div>
+          <div class="field">
+            <label for="dob">dob (YYYY-MM-DD)</label>
+            <input id="dob" type="date" />
+          </div>
+          <div class="field">
+            <label for="gender">gender</label>
+            <select id="gender">
+              <option value="M">M</option>
+              <option value="F">F</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="panNo">panNo</label>
+            <input id="panNo" type="text" maxlength="10" />
+          </div>
+          <div class="field">
+            <label for="emailId1">emailId1</label>
+            <input id="emailId1" type="email" />
+          </div>
+          <div class="field full">
+            <label for="address1">address1</label>
+            <input id="address1" type="text" />
+          </div>
+          <div class="field">
+            <label for="city">city</label>
+            <input id="city" type="text" />
+          </div>
+          <div class="field">
+            <label for="state">state</label>
+            <input id="state" type="text" />
+          </div>
+          <div class="field">
+            <label for="pinCode">pinCode</label>
+            <input id="pinCode" type="text" maxlength="6" />
+          </div>
+          <div class="field">
+            <label for="loanAmount">loanAmount</label>
+            <input id="loanAmount" type="text" />
+          </div>
+        </div>
+
+        <div class="field full" style="margin-top:1rem">
+          <label for="json-editor">Full initiateRequest JSON (spec format)</label>
+          <textarea id="json-editor" class="json-editor" placeholder="Load a record or paste initiate JSON…"></textarea>
+        </div>
+
+        <p id="delay-hint" style="font-size:0.78rem;color:var(--muted);margin:0.75rem 0 0"></p>
+
+        <div class="actions">
+          <button type="button" id="submit-btn" class="btn-primary">Submit Initiate</button>
+          <button type="button" id="quick-submit" class="btn-secondary">Quick: Load + Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="response-panel">
+      <div class="panel-header">Eligibility Engine Response</div>
+      <div class="panel-body">
+        <p style="color:var(--muted);font-size:0.9rem">
+          Load a generated record, edit fields if needed, then submit. You'll see the sync ACK immediately,
+          followed by async producer callbacks (mbCibil → … → summary).
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script src="/ui/app.js"></script>
+</body>
+</html>

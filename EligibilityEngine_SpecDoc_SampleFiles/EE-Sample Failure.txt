@@ -1,0 +1,25 @@
+FailureRes:
+
+
+{
+    "data": {
+        "orcJourneyID": "WF_7707076c-4ba2-429d-afb4-e224bd53ab9b18106281148210",
+        "bankJourneyID": "12345567",
+        "partnerJourneyID": "12345567",
+        "statusMessage": "Technical Error- Service Down",
+        "statusCode": "1"
+    },
+    "messages": {
+        "codes": [],
+        "requestId": "aa7581ce-d393-4ad7-b373-53832bec537f",
+        "keyId": null,
+        "overrideAuthLevelsReqd": null,
+        "status": "SUCCESS",
+        "httpStatusCode": "200"
+    }
+}
+
+
+
+==================================================================================
+

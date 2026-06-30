@@ -1,0 +1,36 @@
+{
+  "contextParameter": {
+    "partnerJourneyID": "1234556789",
+    "bankJourneyID": "1234556789",
+    "orcJourneyID": "WF-_9348b08f-cf6f-4002-9568-1cf8ae1d81be51314212199806",
+    "partnerID": "HDFCBANK",
+    "channelID": "CHANNEL_FYNDNA_HL1",
+    "productName": "FYNDNA_HL1"
+  },
+  "statusCode":"0",
+  "statusMsg":"Success",
+  "userType": "applicant,coapplicant",
+  "userIndex":"0,1,2",
+  "reportType":"mbMbEot",
+  "mbMbEot": {
+	  "Header" : "",
+	  "Body" : {
+		"MultiBureauEoTRequest" : {
+		  "HEADER" : {
+			"APPLICATION-ID" : "190179",
+			"CUST-ID" : "280217",
+			"RESPONSE-TYPE" : "RESPONSE",
+			"REQUEST-RECEIVED-TIME" : "28042025 19:01:56",
+			"SOURCE-SYSTEM" : "ECBF"
+		  },
+		  "ACKNOWLEDGEMENT-ID" : "1130996168",
+		  "STATUS" : "END-OF-TXN",
+		  "SENT-TO-CIBIL" : "Y",
+		  "SENT-TO-EQUIFAX" : "N",
+		  "SENT-TO-EXPERIAN" : "Y",
+		  "SENT-TO-CHM" : "N",
+		  "soaFillers" : ""
+		}
+	  }
+	}
+}

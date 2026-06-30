@@ -1,0 +1,26 @@
+{
+  "name": "fraud-hit",
+  "description": "High Hunter match score with rule hits",
+  "mbCibil": {
+    "score": "650",
+    "subjectReturnCode": "FOUND"
+  },
+  "mbEquifax": {
+    "errorMsg": ""
+  },
+  "mbHighMark": {
+    "statusIq": "SUCCESS"
+  },
+  "posidex": {
+    "matchCount": 0,
+    "soaStatus": "No Match"
+  },
+  "hunter": {
+    "matches": "1",
+    "totalMatchScore": "1060"
+  },
+  "perfios": {
+    "grade": "AA",
+    "medianSalary": "35000"
+  }
+}

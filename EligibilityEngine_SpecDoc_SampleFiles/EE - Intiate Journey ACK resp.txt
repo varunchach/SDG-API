@@ -1,0 +1,17 @@
+{
+    "data": {
+        "orcJourneyID": "FYNDNA_HL1_WF_b5e2583b-c568-4351-8789-ff47ee7b9d7f22601357927737",
+        "bankJourneyID": "45562927123",
+        "partnerJourneyID": "345005711293",
+        "statusMessage": "Success",
+        "statusCode": "0"
+    },
+    "messages": {
+        "codes": [],
+        "requestId": "7b8a0640-a6c9-4ce7-83f0-cd9352c51f16",
+        "keyId": null,
+        "overrideAuthLevelsReqd": null,
+        "status": "SUCCESS",
+        "httpStatusCode": "200"
+    }
+}

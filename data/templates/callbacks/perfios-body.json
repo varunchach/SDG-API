@@ -1,0 +1,2820 @@
+{
+      "CustomerInfo": {
+        "address": "34 Tafiq Lane, Bangalore, Karnataka 560034",
+        "bank": "Acme Bank Ltd., India",
+        "customerTransactionId": "D24I03016520H0W1",
+        "durationInMonths": "6",
+        "email": "shangu@perfios.com",
+        "endDate": "2024-08-31",
+        "instId": "998",
+        "landline": "080-12345678",
+        "mobile": "9881234567",
+        "name": "Shangu Shiva",
+        "pan": "ABDCE1234F",
+        "perfiosTransactionId": "HR8B1725366707667",
+        "sourceOfData": "NetBanking Account",
+        "startDate": "2024-03-01"
+      },
+      "AdditionalParameters": {
+        "applicantType": "RETAIL",
+        "dateOfApplication": "2024-08-09",
+        "employerName": "CARBON",
+        "productType": "CC",
+        "referenceNumber": "BS5177628815",
+        "sourceSystem": "APS"
+      },
+      "Statementdetails": {
+        "Statement": {
+          "fileName": "NBF1",
+          "CustomerInfo": {
+            "address": "34 Tafiq Lane, Bangalore, Karnataka 560034",
+            "bank": "Acme Bank Ltd., India",
+            "email": "shangu@perfios.com",
+            "landline": "080-12345678",
+            "mobile": "9881234567",
+            "name": "Shangu Shiva",
+            "pan": "ABDCE1234F"
+          },
+          "StatementAccounts": {
+            "StatementAccount": {
+              "accountNo": "54XX8XXX15",
+              "accountType": "Bank",
+              "xnsEndDate": "2024-09-03",
+              "xnsStartDate": "2023-09-04"
+            }
+          }
+        }
+      },
+      "SummaryInfo": {
+        "accNo": "54XX8XXX15",
+        "accType": "Savings",
+        "amountConsistentCredits": "3",
+        "dateConsistentCredits": "4",
+        "fullMonthCount": "6",
+        "grade": "AAA",
+        "imputedValue": "36880",
+        "index": "3",
+        "instName": "Acme Bank Ltd., India",
+        "medianDay": "2",
+        "medianSalary": "40750",
+        "savingsBankInterestCredited": "true",
+        "score": "0",
+        "Total": {
+          "balAvg": "80522.09",
+          "balLast": "99276.66",
+          "balMax": "228312.80",
+          "balMin": "34078.47",
+          "bankCharges": "0",
+          "bounceOrPenalCharges": "0",
+          "cashDeposits": "0",
+          "cashWithdrawals": "17",
+          "chqCredits": "0",
+          "chqDeposits": "0",
+          "chqIssues": "0",
+          "credits": "32",
+          "debits": "117",
+          "emiEcsIssues": "0",
+          "interestCharges": "0",
+          "interestIncomes": "2",
+          "invExpenses": "2",
+          "inwBounces": "0",
+          "outwBounces": "0",
+          "salaries": "6",
+          "totalCashDeposit": "0.00",
+          "totalCashWithdrawal": "83500.00",
+          "totalChqDeposit": "0.00",
+          "totalChqIssue": "0.00",
+          "totalCredit": "369759.66",
+          "totalDebit": "349898.22",
+          "totalEmiEcsIssue": "0.00",
+          "totalInsuranceExpense": "3278.00",
+          "totalInterestCharged": "0.00",
+          "totalInterestIncome": "87.00",
+          "totalInvExpense": "3278.00",
+          "totalInwBounceNonTechnical": "0.00",
+          "totalInwEMIBounceNonTechnical": "0.00",
+          "totalSalary": "270321.00"
+        },
+        "Average": {
+          "balAvg": "13420.35",
+          "balLast": "16546.11",
+          "balMax": "38052.13",
+          "balMin": "5679.75",
+          "bankCharges": "0",
+          "bounceOrPenalCharges": "0",
+          "cashDeposits": "0",
+          "cashWithdrawals": "3",
+          "chqCredits": "0",
+          "chqDeposits": "0",
+          "chqIssues": "0",
+          "credits": "5",
+          "debits": "20",
+          "emiEcsIssues": "0",
+          "interestCharges": "0",
+          "interestIncomes": "0",
+          "invExpenses": "0",
+          "inwBounces": "0",
+          "outwBounces": "0",
+          "salaries": "1",
+          "totalCashDeposit": "0.00",
+          "totalCashWithdrawal": "13916.67",
+          "totalChqDeposit": "0.00",
+          "totalChqIssue": "0.00",
+          "totalCredit": "61626.61",
+          "totalDebit": "58316.37",
+          "totalEmiEcsIssue": "0.00",
+          "totalInsuranceExpense": "546.33",
+          "totalInterestCharged": "0.00",
+          "totalInterestIncome": "14.50",
+          "totalInvExpense": "546.33",
+          "totalInwBounceNonTechnical": "0.00",
+          "totalInwEMIBounceNonTechnical": "0.00",
+          "totalSalary": "45053.50"
+        }
+      },
+      "MonthlyDetails": {
+        "MonthlyDetail": [
+          {
+            "balAvg": "8368.83",
+            "balLast": "9259.15",
+            "balMax": "22608.15",
+            "balMin": "1172.58",
+            "bankCharges": "0",
+            "bounceOrPenalCharges": "0",
+            "cashDeposits": "0",
+            "cashWithdrawals": "7",
+            "chqCredits": "0",
+            "chqDeposits": "0",
+            "chqIssues": "0",
+            "credits": "7",
+            "debits": "24",
+            "emiEcsIssues": "0",
+            "interestCharges": "0",
+            "interestIncomes": "1",
+            "invExpenses": "1",
+            "inwBounces": "0",
+            "monthName": "Mar-24",
+            "outwBounces": "0",
+            "salaries": "1",
+            "startDate": "2024-03-01",
+            "totalCashDeposit": "0.00",
+            "totalCashWithdrawal": "45000.00",
+            "totalChqDeposit": "0.00",
+            "totalChqIssue": "0.00",
+            "totalCredit": "86315.00",
+            "totalDebit": "78228.43",
+            "totalEmiEcsIssue": "0.00",
+            "totalInsuranceExpense": "2711.00",
+            "totalInterestCharged": "0.00",
+            "totalInterestIncome": "30.00",
+            "totalInvExpense": "2711.00",
+            "totalInwBounceNonTechnical": "0.00",
+            "totalInwEMIBounceNonTechnical": "0.00",
+            "totalSalary": "37000.00"
+          },
+          {
+            "balAvg": "9820.01",
+            "balLast": "5468.76",
+            "balMax": "46139.15",
+            "balMin": "5468.76",
+            "bankCharges": "0",
+            "bounceOrPenalCharges": "0",
+            "cashDeposits": "0",
+            "cashWithdrawals": "1",
+            "chqCredits": "0",
+            "chqDeposits": "0",
+            "chqIssues": "0",
+            "credits": "3",
+            "debits": "14",
+            "emiEcsIssues": "0",
+            "interestCharges": "0",
+            "interestIncomes": "0",
+            "invExpenses": "0",
+            "inwBounces": "0",
+            "monthName": "Apr-24",
+            "outwBounces": "0",
+            "salaries": "1",
+            "startDate": "2024-04-01",
+            "totalCashDeposit": "0.00",
+            "totalCashWithdrawal": "3000.00",
+            "totalChqDeposit": "0.00",
+            "totalChqIssue": "0.00",
+            "totalCredit": "56427.00",
+            "totalDebit": "60217.39",
+            "totalEmiEcsIssue": "0.00",
+            "totalInsuranceExpense": "0.00",
+            "totalInterestCharged": "0.00",
+            "totalInterestIncome": "0.00",
+            "totalInvExpense": "0.00",
+            "totalInwBounceNonTechnical": "0.00",
+            "totalInwEMIBounceNonTechnical": "0.00",
+            "totalSalary": "36880.00"
+          },
+          {
+            "balAvg": "5764.22",
+            "balLast": "2710.31",
+            "balMax": "13372.98",
+            "balMin": "2710.31",
+            "bankCharges": "0",
+            "bounceOrPenalCharges": "0",
+            "cashDeposits": "0",
+            "cashWithdrawals": "2",
+            "chqCredits": "0",
+            "chqDeposits": "0",
+            "chqIssues": "0",
+            "credits": "3",
+            "debits": "16",
+            "emiEcsIssues": "0",
+            "interestCharges": "0",
+            "interestIncomes": "0",
+            "invExpenses": "0",
+            "inwBounces": "0",
+            "monthName": "May-24",
+            "outwBounces": "0",
+            "salaries": "1",
+            "startDate": "2024-05-01",
+            "totalCashDeposit": "0.00",
+            "totalCashWithdrawal": "2000.00",
+            "totalChqDeposit": "0.00",
+            "totalChqIssue": "0.00",
+            "totalCredit": "43535.00",
+            "totalDebit": "46293.45",
+            "totalEmiEcsIssue": "0.00",
+            "totalInsuranceExpense": "0.00",
+            "totalInterestCharged": "0.00",
+            "totalInterestIncome": "0.00",
+            "totalInvExpense": "0.00",
+            "totalInwBounceNonTechnical": "0.00",
+            "totalInwEMIBounceNonTechnical": "0.00",
+            "totalSalary": "36880.00"
+          },
+          {
+            "balAvg": "14053.47",
+            "balLast": "12911.21",
+            "balMax": "27732.16",
+            "balMin": "2709.72",
+            "bankCharges": "0",
+            "bounceOrPenalCharges": "0",
+            "cashDeposits": "0",
+            "cashWithdrawals": "2",
+            "chqCredits": "0",
+            "chqDeposits": "0",
+            "chqIssues": "0",
+            "credits": "7",
+            "debits": "18",
+            "emiEcsIssues": "0",
+            "interestCharges": "0",
+            "interestIncomes": "1",
+            "invExpenses": "0",
+            "inwBounces": "0",
+            "monthName": "Jun-24",
+            "outwBounces": "0",
+            "salaries": "1",
+            "startDate": "2024-06-01",
+            "totalCashDeposit": "0.00",
+            "totalCashWithdrawal": "12000.00",
+            "totalChqDeposit": "0.00",
+            "totalChqIssue": "0.00",
+            "totalCredit": "53068.00",
+            "totalDebit": "42867.10",
+            "totalEmiEcsIssue": "0.00",
+            "totalInsuranceExpense": "0.00",
+            "totalInterestCharged": "0.00",
+            "totalInterestIncome": "57.00",
+            "totalInvExpense": "0.00",
+            "totalInwBounceNonTechnical": "0.00",
+            "totalInwEMIBounceNonTechnical": "0.00",
+            "totalSalary": "40750.00"
+          },
+          {
+            "balAvg": "19360.54",
+            "balLast": "47888.71",
+            "balMax": "70571.65",
+            "balMin": "1888.24",
+            "bankCharges": "0",
+            "bounceOrPenalCharges": "0",
+            "cashDeposits": "0",
+            "cashWithdrawals": "3",
+            "chqCredits": "0",
+            "chqDeposits": "0",
+            "chqIssues": "0",
+            "credits": "9",
+            "debits": "26",
+            "emiEcsIssues": "0",
+            "interestCharges": "0",
+            "interestIncomes": "0",
+            "invExpenses": "1",
+            "inwBounces": "0",
+            "monthName": "Jul-24",
+            "outwBounces": "0",
+            "salaries": "2",
+            "startDate": "2024-07-01",
+            "totalCashDeposit": "0.00",
+            "totalCashWithdrawal": "17500.00",
+            "totalChqDeposit": "0.00",
+            "totalChqIssue": "0.00",
+            "totalCredit": "127066.00",
+            "totalDebit": "92090.00",
+            "totalEmiEcsIssue": "0.00",
+            "totalInsuranceExpense": "567.00",
+            "totalInterestCharged": "0.00",
+            "totalInterestIncome": "0.00",
+            "totalInvExpense": "567.00",
+            "totalInwBounceNonTechnical": "0.00",
+            "totalInwEMIBounceNonTechnical": "0.00",
+            "totalSalary": "118811.00"
+          },
+          {
+            "balAvg": "23155.02",
+            "balLast": "21038.52",
+            "balMax": "47888.71",
+            "balMin": "20128.86",
+            "bankCharges": "0",
+            "bounceOrPenalCharges": "0",
+            "cashDeposits": "0",
+            "cashWithdrawals": "2",
+            "chqCredits": "0",
+            "chqDeposits": "0",
+            "chqIssues": "0",
+            "credits": "3",
+            "debits": "19",
+            "emiEcsIssues": "0",
+            "interestCharges": "0",
+            "interestIncomes": "0",
+            "invExpenses": "0",
+            "inwBounces": "0",
+            "monthName": "Aug-24",
+            "outwBounces": "0",
+            "salaries": "0",
+            "startDate": "2024-08-01",
+            "totalCashDeposit": "0.00",
+            "totalCashWithdrawal": "4000.00",
+            "totalChqDeposit": "0.00",
+            "totalChqIssue": "0.00",
+            "totalCredit": "3348.66",
+            "totalDebit": "30201.85",
+            "totalEmiEcsIssue": "0.00",
+            "totalInsuranceExpense": "0.00",
+            "totalInterestCharged": "0.00",
+            "totalInterestIncome": "0.00",
+            "totalInvExpense": "0.00",
+            "totalInwBounceNonTechnical": "0.00",
+            "totalInwEMIBounceNonTechnical": "0.00",
+            "totalSalary": "0.00"
+          }
+        ]
+      },
+      "EODBalances": {
+        "EODBalance": [
+          {
+            "balance": "1172.58",
+            "date": "2024-03-01"
+          },
+          {
+            "balance": "1172.58",
+            "date": "2024-03-02"
+          },
+          {
+            "balance": "10851.81",
+            "date": "2024-03-03"
+          },
+          {
+            "balance": "8851.81",
+            "date": "2024-03-04"
+          },
+          {
+            "balance": "7589.15",
+            "date": "2024-03-05"
+          },
+          {
+            "balance": "7589.15",
+            "date": "2024-03-06"
+          },
+          {
+            "balance": "3589.15",
+            "date": "2024-03-07"
+          },
+          {
+            "balance": "3589.15",
+            "date": "2024-03-08"
+          },
+          {
+            "balance": "22608.15",
+            "date": "2024-03-09"
+          },
+          {
+            "balance": "2608.15",
+            "date": "2024-03-10"
+          },
+          {
+            "balance": "11642.15",
+            "date": "2024-03-11"
+          },
+          {
+            "balance": "11642.15",
+            "date": "2024-03-12"
+          },
+          {
+            "balance": "8782.15",
+            "date": "2024-03-13"
+          },
+          {
+            "balance": "8782.15",
+            "date": "2024-03-14"
+          },
+          {
+            "balance": "8782.15",
+            "date": "2024-03-15"
+          },
+          {
+            "balance": "8227.15",
+            "date": "2024-03-16"
+          },
+          {
+            "balance": "8128.15",
+            "date": "2024-03-17"
+          },
+          {
+            "balance": "8128.15",
+            "date": "2024-03-18"
+          },
+          {
+            "balance": "8128.15",
+            "date": "2024-03-19"
+          },
+          {
+            "balance": "8079.15",
+            "date": "2024-03-20"
+          },
+          {
+            "balance": "8079.15",
+            "date": "2024-03-21"
+          },
+          {
+            "balance": "8079.15",
+            "date": "2024-03-22"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-23"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-24"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-25"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-26"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-27"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-28"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-29"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-30"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-03-31"
+          },
+          {
+            "balance": "9259.15",
+            "date": "2024-04-01"
+          },
+          {
+            "balance": "46139.15",
+            "date": "2024-04-02"
+          },
+          {
+            "balance": "39874.15",
+            "date": "2024-04-03"
+          },
+          {
+            "balance": "11709.15",
+            "date": "2024-04-04"
+          },
+          {
+            "balance": "11709.15",
+            "date": "2024-04-05"
+          },
+          {
+            "balance": "11709.15",
+            "date": "2024-04-06"
+          },
+          {
+            "balance": "11709.15",
+            "date": "2024-04-07"
+          },
+          {
+            "balance": "7605.15",
+            "date": "2024-04-08"
+          },
+          {
+            "balance": "7605.15",
+            "date": "2024-04-09"
+          },
+          {
+            "balance": "7456.15",
+            "date": "2024-04-10"
+          },
+          {
+            "balance": "7456.15",
+            "date": "2024-04-11"
+          },
+          {
+            "balance": "7456.15",
+            "date": "2024-04-12"
+          },
+          {
+            "balance": "7406.15",
+            "date": "2024-04-13"
+          },
+          {
+            "balance": "7406.15",
+            "date": "2024-04-14"
+          },
+          {
+            "balance": "6922.76",
+            "date": "2024-04-15"
+          },
+          {
+            "balance": "6823.76",
+            "date": "2024-04-16"
+          },
+          {
+            "balance": "6774.76",
+            "date": "2024-04-17"
+          },
+          {
+            "balance": "6774.76",
+            "date": "2024-04-18"
+          },
+          {
+            "balance": "6774.76",
+            "date": "2024-04-19"
+          },
+          {
+            "balance": "6774.76",
+            "date": "2024-04-20"
+          },
+          {
+            "balance": "6774.76",
+            "date": "2024-04-21"
+          },
+          {
+            "balance": "7274.76",
+            "date": "2024-04-22"
+          },
+          {
+            "balance": "6719.76",
+            "date": "2024-04-23"
+          },
+          {
+            "balance": "5519.76",
+            "date": "2024-04-24"
+          },
+          {
+            "balance": "5519.76",
+            "date": "2024-04-25"
+          },
+          {
+            "balance": "5519.76",
+            "date": "2024-04-26"
+          },
+          {
+            "balance": "5519.76",
+            "date": "2024-04-27"
+          },
+          {
+            "balance": "5468.76",
+            "date": "2024-04-28"
+          },
+          {
+            "balance": "5468.76",
+            "date": "2024-04-29"
+          },
+          {
+            "balance": "5468.76",
+            "date": "2024-04-30"
+          },
+          {
+            "balance": "5468.76",
+            "date": "2024-05-01"
+          },
+          {
+            "balance": "13372.98",
+            "date": "2024-05-02"
+          },
+          {
+            "balance": "13372.98",
+            "date": "2024-05-03"
+          },
+          {
+            "balance": "7377.98",
+            "date": "2024-05-04"
+          },
+          {
+            "balance": "7377.98",
+            "date": "2024-05-05"
+          },
+          {
+            "balance": "7377.98",
+            "date": "2024-05-06"
+          },
+          {
+            "balance": "6377.98",
+            "date": "2024-05-07"
+          },
+          {
+            "balance": "5097.98",
+            "date": "2024-05-08"
+          },
+          {
+            "balance": "4540.98",
+            "date": "2024-05-09"
+          },
+          {
+            "balance": "4540.98",
+            "date": "2024-05-10"
+          },
+          {
+            "balance": "6690.98",
+            "date": "2024-05-11"
+          },
+          {
+            "balance": "6690.98",
+            "date": "2024-05-12"
+          },
+          {
+            "balance": "6690.98",
+            "date": "2024-05-13"
+          },
+          {
+            "balance": "6690.98",
+            "date": "2024-05-14"
+          },
+          {
+            "balance": "6690.98",
+            "date": "2024-05-15"
+          },
+          {
+            "balance": "6690.98",
+            "date": "2024-05-16"
+          },
+          {
+            "balance": "6690.98",
+            "date": "2024-05-17"
+          },
+          {
+            "balance": "5660.31",
+            "date": "2024-05-18"
+          },
+          {
+            "balance": "4561.31",
+            "date": "2024-05-19"
+          },
+          {
+            "balance": "4561.31",
+            "date": "2024-05-20"
+          },
+          {
+            "balance": "4561.31",
+            "date": "2024-05-21"
+          },
+          {
+            "balance": "4210.31",
+            "date": "2024-05-22"
+          },
+          {
+            "balance": "4210.31",
+            "date": "2024-05-23"
+          },
+          {
+            "balance": "4210.31",
+            "date": "2024-05-24"
+          },
+          {
+            "balance": "4210.31",
+            "date": "2024-05-25"
+          },
+          {
+            "balance": "4210.31",
+            "date": "2024-05-26"
+          },
+          {
+            "balance": "4210.31",
+            "date": "2024-05-27"
+          },
+          {
+            "balance": "4210.31",
+            "date": "2024-05-28"
+          },
+          {
+            "balance": "2710.31",
+            "date": "2024-05-29"
+          },
+          {
+            "balance": "2710.31",
+            "date": "2024-05-30"
+          },
+          {
+            "balance": "2710.31",
+            "date": "2024-05-31"
+          },
+          {
+            "balance": "2710.31",
+            "date": "2024-06-01"
+          },
+          {
+            "balance": "2709.72",
+            "date": "2024-06-02"
+          },
+          {
+            "balance": "27732.16",
+            "date": "2024-06-03"
+          },
+          {
+            "balance": "17583.16",
+            "date": "2024-06-04"
+          },
+          {
+            "balance": "17583.16",
+            "date": "2024-06-05"
+          },
+          {
+            "balance": "17583.16",
+            "date": "2024-06-06"
+          },
+          {
+            "balance": "17583.16",
+            "date": "2024-06-07"
+          },
+          {
+            "balance": "17057.16",
+            "date": "2024-06-08"
+          },
+          {
+            "balance": "16057.16",
+            "date": "2024-06-09"
+          },
+          {
+            "balance": "15507.16",
+            "date": "2024-06-10"
+          },
+          {
+            "balance": "15507.16",
+            "date": "2024-06-11"
+          },
+          {
+            "balance": "15376.16",
+            "date": "2024-06-12"
+          },
+          {
+            "balance": "15376.16",
+            "date": "2024-06-13"
+          },
+          {
+            "balance": "15376.16",
+            "date": "2024-06-14"
+          },
+          {
+            "balance": "13376.16",
+            "date": "2024-06-15"
+          },
+          {
+            "balance": "13376.16",
+            "date": "2024-06-16"
+          },
+          {
+            "balance": "13014.16",
+            "date": "2024-06-17"
+          },
+          {
+            "balance": "13014.16",
+            "date": "2024-06-18"
+          },
+          {
+            "balance": "12960.21",
+            "date": "2024-06-19"
+          },
+          {
+            "balance": "12960.21",
+            "date": "2024-06-20"
+          },
+          {
+            "balance": "12960.21",
+            "date": "2024-06-21"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-22"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-23"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-24"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-25"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-26"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-27"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-28"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-29"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-06-30"
+          },
+          {
+            "balance": "12911.21",
+            "date": "2024-07-01"
+          },
+          {
+            "balance": "12910.65",
+            "date": "2024-07-02"
+          },
+          {
+            "balance": "12761.65",
+            "date": "2024-07-03"
+          },
+          {
+            "balance": "70571.65",
+            "date": "2024-07-04"
+          },
+          {
+            "balance": "70571.65",
+            "date": "2024-07-05"
+          },
+          {
+            "balance": "26249.44",
+            "date": "2024-07-06"
+          },
+          {
+            "balance": "26249.44",
+            "date": "2024-07-07"
+          },
+          {
+            "balance": "25249.44",
+            "date": "2024-07-08"
+          },
+          {
+            "balance": "25249.44",
+            "date": "2024-07-09"
+          },
+          {
+            "balance": "25249.44",
+            "date": "2024-07-10"
+          },
+          {
+            "balance": "22889.44",
+            "date": "2024-07-11"
+          },
+          {
+            "balance": "22889.44",
+            "date": "2024-07-12"
+          },
+          {
+            "balance": "22984.44",
+            "date": "2024-07-13"
+          },
+          {
+            "balance": "22989.44",
+            "date": "2024-07-14"
+          },
+          {
+            "balance": "19323.44",
+            "date": "2024-07-15"
+          },
+          {
+            "balance": "19323.44",
+            "date": "2024-07-16"
+          },
+          {
+            "balance": "19168.49",
+            "date": "2024-07-17"
+          },
+          {
+            "balance": "19168.49",
+            "date": "2024-07-18"
+          },
+          {
+            "balance": "19168.49",
+            "date": "2024-07-19"
+          },
+          {
+            "balance": "19173.49",
+            "date": "2024-07-20"
+          },
+          {
+            "balance": "4683.49",
+            "date": "2024-07-21"
+          },
+          {
+            "balance": "4683.49",
+            "date": "2024-07-22"
+          },
+          {
+            "balance": "4116.49",
+            "date": "2024-07-23"
+          },
+          {
+            "balance": "4116.49",
+            "date": "2024-07-24"
+          },
+          {
+            "balance": "4116.49",
+            "date": "2024-07-25"
+          },
+          {
+            "balance": "4116.49",
+            "date": "2024-07-26"
+          },
+          {
+            "balance": "3837.74",
+            "date": "2024-07-27"
+          },
+          {
+            "balance": "3788.24",
+            "date": "2024-07-28"
+          },
+          {
+            "balance": "1888.24",
+            "date": "2024-07-29"
+          },
+          {
+            "balance": "1888.24",
+            "date": "2024-07-30"
+          },
+          {
+            "balance": "47888.71",
+            "date": "2024-07-31"
+          },
+          {
+            "balance": "47888.71",
+            "date": "2024-08-01"
+          },
+          {
+            "balance": "47888.71",
+            "date": "2024-08-02"
+          },
+          {
+            "balance": "24208.56",
+            "date": "2024-08-03"
+          },
+          {
+            "balance": "24208.56",
+            "date": "2024-08-04"
+          },
+          {
+            "balance": "24010.06",
+            "date": "2024-08-05"
+          },
+          {
+            "balance": "24010.06",
+            "date": "2024-08-06"
+          },
+          {
+            "balance": "24010.06",
+            "date": "2024-08-07"
+          },
+          {
+            "balance": "23010.06",
+            "date": "2024-08-08"
+          },
+          {
+            "balance": "23010.06",
+            "date": "2024-08-09"
+          },
+          {
+            "balance": "21010.06",
+            "date": "2024-08-10"
+          },
+          {
+            "balance": "21010.06",
+            "date": "2024-08-11"
+          },
+          {
+            "balance": "21010.06",
+            "date": "2024-08-12"
+          },
+          {
+            "balance": "20811.56",
+            "date": "2024-08-13"
+          },
+          {
+            "balance": "20811.56",
+            "date": "2024-08-14"
+          },
+          {
+            "balance": "20811.56",
+            "date": "2024-08-15"
+          },
+          {
+            "balance": "20811.56",
+            "date": "2024-08-16"
+          },
+          {
+            "balance": "20811.56",
+            "date": "2024-08-17"
+          },
+          {
+            "balance": "20811.56",
+            "date": "2024-08-18"
+          },
+          {
+            "balance": "20811.56",
+            "date": "2024-08-19"
+          },
+          {
+            "balance": "20707.61",
+            "date": "2024-08-20"
+          },
+          {
+            "balance": "20707.61",
+            "date": "2024-08-21"
+          },
+          {
+            "balance": "20707.61",
+            "date": "2024-08-22"
+          },
+          {
+            "balance": "20707.61",
+            "date": "2024-08-23"
+          },
+          {
+            "balance": "22207.61",
+            "date": "2024-08-24"
+          },
+          {
+            "balance": "20128.86",
+            "date": "2024-08-25"
+          },
+          {
+            "balance": "20128.86",
+            "date": "2024-08-26"
+          },
+          {
+            "balance": "20128.86",
+            "date": "2024-08-27"
+          },
+          {
+            "balance": "20128.86",
+            "date": "2024-08-28"
+          },
+          {
+            "balance": "20128.86",
+            "date": "2024-08-29"
+          },
+          {
+            "balance": "20128.86",
+            "date": "2024-08-30"
+          },
+          {
+            "balance": "21038.52",
+            "date": "2024-08-31"
+          }
+        ]
+      },
+      "SalaryXns": {
+        "SalaryXn": [
+          {
+            "amount": "37000.00",
+            "balance": "38172.58",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-03-03",
+            "mode": "Transfer",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "36880.00",
+            "balance": "46139.15",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-04-02",
+            "mode": "Transfer",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "36880.00",
+            "balance": "42348.76",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-05-02",
+            "mode": "Transfer",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "40750.00",
+            "balance": "43459.72",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-06-03",
+            "mode": "Transfer",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "57810.00",
+            "balance": "70571.65",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-07-04",
+            "mode": "Transfer",
+            "narration": "SALARY CREDIT SALARY CREDIT FROM"
+          },
+          {
+            "amount": "61001.00",
+            "balance": "62889.24",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-07-31",
+            "mode": "Transfer",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "57950.00",
+            "balance": "78988.01",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-09-02",
+            "mode": "Transfer",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          }
+        ]
+      },
+      "FCUAnalysis": {
+        "PossibleFraudIndicators": "    ",
+        "BehaviouralTransactionalIndicators": "    "
+      },
+      "ScoringDetails": {
+        "Detail": [
+          {
+            "value": "27279.48",
+            "variable": "avgMonthEndBal3"
+          },
+          {
+            "value": "16546.11",
+            "variable": "avgMonthEndBal6"
+          },
+          {
+            "value": "1.27",
+            "variable": "CV3Mon"
+          },
+          {
+            "value": "1.30",
+            "variable": "CV6Mon"
+          },
+          {
+            "value": "7",
+            "variable": "cashWithdrawal3"
+          },
+          {
+            "value": "17",
+            "variable": "cashWithdrawal6"
+          },
+          {
+            "value": "0.15",
+            "variable": "cashWithdrawalToSalary3"
+          },
+          {
+            "value": "0.30",
+            "variable": "cashWithdrawalToSalary6"
+          },
+          {
+            "value": "0",
+            "variable": "inwBounces3"
+          },
+          {
+            "value": "0",
+            "variable": "inwBounces6"
+          },
+          {
+            "value": "0",
+            "variable": "outwBounces3"
+          },
+          {
+            "value": "0",
+            "variable": "outwBounces6"
+          },
+          {
+            "value": "NA",
+            "variable": "accountVintage"
+          },
+          {
+            "value": "18856.34",
+            "variable": "AQB"
+          },
+          {
+            "value": "0",
+            "variable": "interestDebited3"
+          },
+          {
+            "value": "0",
+            "variable": "interestDebited6"
+          },
+          {
+            "value": "0.00",
+            "variable": "totalInterestDebited3"
+          },
+          {
+            "value": "0.00",
+            "variable": "totalInterestDebited6"
+          },
+          {
+            "value": "6.16",
+            "variable": "velocity3"
+          },
+          {
+            "value": "8.94",
+            "variable": "velocity6"
+          },
+          {
+            "value": "NA",
+            "variable": "velocity12"
+          },
+          {
+            "value": "0.24",
+            "variable": "CVInAMB3"
+          },
+          {
+            "value": "0.50",
+            "variable": "CVInAMB6"
+          },
+          {
+            "value": "NA",
+            "variable": "CVInAMB12"
+          },
+          {
+            "value": "3278.00",
+            "variable": "totalInvestment6"
+          },
+          {
+            "value": "0.00",
+            "variable": "cashDepositToCredits"
+          },
+          {
+            "value": "3278.00",
+            "variable": "totalInsurancePayment6"
+          },
+          {
+            "value": "0",
+            "variable": "chqCreditTxn6"
+          },
+          {
+            "value": "NA",
+            "variable": "chqCreditTxn12"
+          },
+          {
+            "value": "0",
+            "variable": "derogatoryCharges3"
+          },
+          {
+            "value": "0",
+            "variable": "derogatoryCharges6"
+          },
+          {
+            "value": "NA",
+            "variable": "derogatoryCharges12"
+          },
+          {
+            "value": "0",
+            "variable": "nonDerogatoryCharges3"
+          },
+          {
+            "value": "0",
+            "variable": "nonDerogatoryCharges6"
+          },
+          {
+            "value": "NA",
+            "variable": "nonDerogatoryCharges12"
+          },
+          {
+            "value": "58316.37",
+            "variable": "avgDebit6"
+          },
+          {
+            "value": "NA",
+            "variable": "avgDebit12"
+          },
+          {
+            "value": "Y",
+            "variable": "existenceOfSalary"
+          },
+          {
+            "value": "Y",
+            "variable": "existenceOfInterestCredit"
+          },
+          {
+            "value": "152",
+            "variable": "xnsCount"
+          },
+          {
+            "value": "36880",
+            "variable": "sal"
+          },
+          {
+            "value": "57950",
+            "variable": "salM1"
+          },
+          {
+            "value": "0",
+            "variable": "salM2"
+          },
+          {
+            "value": "61001",
+            "variable": "salM3"
+          },
+          {
+            "value": "40750",
+            "variable": "salM4"
+          },
+          {
+            "value": "36880",
+            "variable": "salM5"
+          },
+          {
+            "value": "36880",
+            "variable": "salM6"
+          },
+          {
+            "value": "39650.33",
+            "variable": "3mAvgSal"
+          },
+          {
+            "value": "38910.17",
+            "variable": "6mAvgSal"
+          },
+          {
+            "value": "0",
+            "variable": "6mMinSal"
+          },
+          {
+            "value": "61001.00",
+            "variable": "6mMaxSal"
+          },
+          {
+            "value": "0",
+            "variable": "emiCountM1"
+          },
+          {
+            "value": "0",
+            "variable": "emiSumM1"
+          },
+          {
+            "value": "NA",
+            "variable": "salToEmi"
+          },
+          {
+            "value": "0",
+            "variable": "dummy1"
+          },
+          {
+            "value": "NA",
+            "variable": "dummy2"
+          },
+          {
+            "value": "NA",
+            "variable": "dummy3"
+          },
+          {
+            "value": "AAA",
+            "variable": "dummy4"
+          },
+          {
+            "value": "3",
+            "variable": "dummy5"
+          },
+          {
+            "value": "FALSE",
+            "variable": "dummy6"
+          },
+          {
+            "value": "FALSE",
+            "variable": "dummy7"
+          },
+          {
+            "value": "",
+            "variable": "dummy8"
+          },
+          {
+            "value": "",
+            "variable": "dummy9"
+          },
+          {
+            "value": "",
+            "variable": "dummy10"
+          },
+          {
+            "value": "",
+            "variable": "dummy11"
+          },
+          {
+            "value": "",
+            "variable": "dummy12"
+          },
+          {
+            "value": "",
+            "variable": "dummy13"
+          },
+          {
+            "value": "",
+            "variable": "dummy14"
+          },
+          {
+            "value": "",
+            "variable": "dummy15"
+          },
+          {
+            "value": "",
+            "variable": "dummy16"
+          },
+          {
+            "value": "",
+            "variable": "dummy17"
+          },
+          {
+            "value": "NA",
+            "variable": "dummy18"
+          },
+          {
+            "value": "NA",
+            "variable": "dummy19"
+          },
+          {
+            "value": "57950.00",
+            "variable": "dummy20"
+          },
+          {
+            "value": "2024-09-02",
+            "variable": "dummy21"
+          },
+          {
+            "value": " ",
+            "variable": "dummy22"
+          },
+          {
+            "value": " ",
+            "variable": "dummy23"
+          },
+          {
+            "value": " ",
+            "variable": "dummy24"
+          },
+          {
+            "value": " ",
+            "variable": "dummy25"
+          },
+          {
+            "value": " ",
+            "variable": "dummy26"
+          },
+          {
+            "value": " ",
+            "variable": "dummy27"
+          },
+          {
+            "value": " ",
+            "variable": "dummy28"
+          },
+          {
+            "value": " ",
+            "variable": "dummy29"
+          },
+          {
+            "value": " ",
+            "variable": "dummy30"
+          },
+          {
+            "value": " ",
+            "variable": "dummy31"
+          },
+          {
+            "value": " ",
+            "variable": "dummy32"
+          },
+          {
+            "value": " ",
+            "variable": "dummy33"
+          },
+          {
+            "value": " ",
+            "variable": "dummy34"
+          },
+          {
+            "value": " ",
+            "variable": "dummy35"
+          },
+          {
+            "value": " ",
+            "variable": "dummy36"
+          },
+          {
+            "value": " ",
+            "variable": "dummy37"
+          },
+          {
+            "value": " ",
+            "variable": "dummy38"
+          },
+          {
+            "value": " ",
+            "variable": "dummy39"
+          },
+          {
+            "value": " ",
+            "variable": "dummy40"
+          }
+        ]
+      },
+      "Xns": {
+        "accountNo": "54XX8XXX15",
+        "accountType": "Savings",
+        "Xn": [
+          {
+            "amount": "37000.00",
+            "balance": "38172.58",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-03-03",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "-5000.00",
+            "balance": "33172.58",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-03",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 018209797443, Rent uh"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "23172.58",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-03",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXXXXX3944@cnrb0001222.ifsc.npci,REF NO - 018209807631, UPI"
+          },
+          {
+            "amount": "-12350.77",
+            "balance": "10821.81",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-03-03",
+            "narration": "IMPS OUTWARD ORG UPI To credclub@icici,REF NO - XXXXXXXX5953, credit card bill payment on CRED"
+          },
+          {
+            "amount": "30.00",
+            "balance": "10851.81",
+            "category": "Interest",
+            "chqNo": "",
+            "date": "2024-03-03",
+            "narration": "Interest Earned during the Period: 01APR2020 - 30JUN2020 for Savings account"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "9851.81",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-04",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX1213@ybl,REF NO - 018318493094, Payment from PhonePe"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "8851.81",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-03-04",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 01JUL1825 Card No.: 5497XXX0XXXX9807 of 01JUL20 Ref: 884 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-1262.66",
+            "balance": "7589.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-05",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 018413568797, Vetti moi uh"
+          },
+          {
+            "amount": "-2000.00",
+            "balance": "5589.15",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-03-07",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 04JUL1003 Card No.: 5497XXX0XXXX9807 of 04JUL20 Ref: 1076 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-2000.00",
+            "balance": "3589.15",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-03-07",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 04JUL1844 Card No.: 5497XXX0XXXX9807 of 04JUL20 Ref: 3324 SRIRANGAM BRANCH IADTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "19019.00",
+            "balance": "22608.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-09",
+            "narration": "IMPS INWARD ORG UPI From 8883183626@paytm,REF NO - 018878544411, NA"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "12608.15",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-03-10",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 07JUL1143 Card No.: 5497XXX0XXXX9807 of 07JUL20 Ref: 3791 SRIRANGAM BRANCH IADTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "2608.15",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-03-10",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 07JUL1144 Card No.: 5497XXX0XXXX9807 of07JUL20 Ref: 3792 SRIRANGAM BRANCH IADTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "19076.00",
+            "balance": "21684.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "IMPS INWARD ORG UPI From 8883183626@paytm,REF NO - 019097167750, NA"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "11684.15",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 08JUL1705 Card No.: 5497XXX0XXXX9807 of 08JUL20 Ref: 1487 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "1684.15",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 08JUL1706 Card No.: 5497XXX0XXXX9807 of 08JUL20 Ref: 1488 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "10000.00",
+            "balance": "11684.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "IMPS INWARD ORG UPI From 9095411213@ybl,REF NO - 019080887481, Payment from PhonePe"
+          },
+          {
+            "amount": "-17.80",
+            "balance": "11666.35",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "SHARED ATM CHGS Card no : 5497XXX0XXXX9807 Ref. : 1487 SRIRANGAM ATM TIRUCHIRAPALLTNIN Invoice No. :RB20078154718261"
+          },
+          {
+            "amount": "-17.80",
+            "balance": "11648.55",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "SHARED ATM CHGS Card no : 5497XXX0XXXX9807 Ref. : 1488 SRIRANGAM ATM TIRUCHIRAPALLTNIN Invoice No. :RB20078154718261"
+          },
+          {
+            "amount": "-1.60",
+            "balance": "11646.95",
+            "category": "Tax",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "SGST DEBIT SGST @ 9.00 p.c ON SHARED ATM CHGS - 54XX8XXX15 - Rs 17.80 - HSN : 997112 Invoice No. : RB20078154718261"
+          },
+          {
+            "amount": "-1.60",
+            "balance": "11645.35",
+            "category": "Tax",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "CGST DEBIT CGST @ 9.00 p.c ON SHARED ATM CHGS - 54XX8XXX15 - Rs 17.80 - HSN : 997112 Invoice No. : RB20078154718261"
+          },
+          {
+            "amount": "-1.60",
+            "balance": "11643.75",
+            "category": "Tax",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "SGST DEBIT SGST @ 9.00 p.c ON SHARED ATM CHGS - 54XX8XXX15 - Rs 17.80 - HSN : 997112 Invoice No. : RB20078154718261"
+          },
+          {
+            "amount": "-1.60",
+            "balance": "11642.15",
+            "category": "Tax",
+            "chqNo": "",
+            "date": "2024-03-11",
+            "narration": "CGST DEBIT CGST @ 9.00 p.c ON SHARED ATM CHGS - 54XX8XXX15 - Rs 17.80 - HSN : 997112 Invoice No. : RB20078154718261"
+          },
+          {
+            "amount": "-149.00",
+            "balance": "11493.15",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-03-13",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 019215660181, Oid11292190604@Paytm Airtel Mobile Recharge"
+          },
+          {
+            "amount": "-2711.00",
+            "balance": "8782.15",
+            "category": "Insurance",
+            "chqNo": "",
+            "date": "2024-03-13",
+            "narration": "PURCHASE SUBJECT: MCUPOS 08JUL2143 Card no.: 5497XXX0XXXX9807 08JUL20 214301 POLICYBAZAAR COMPLOT NO 119SE Ref: 070840082500"
+          },
+          {
+            "amount": "-555.00",
+            "balance": "8227.15",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-03-16",
+            "narration": "IMPS OUTWARD ORG UPI To jio@yesbank,REF NO - XXXXXXXX5240, JIO20BR0004X2E6RF13072020T122053E0360"
+          },
+          {
+            "amount": "-99.00",
+            "balance": "8128.15",
+            "category": "Entertainment",
+            "chqNo": "",
+            "date": "2024-03-17",
+            "narration": "PURCHASE SUBJECT: MCUPOS 11JUL0000 Card no.: 5497XXX0XXXX9807 11JUL20 223450 GOOGLE *YouTube Music1600 Amp Ref: 019363631698"
+          },
+          {
+            "amount": "-49.00",
+            "balance": "8079.15",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-03-20",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 019901546674, Oid11354818808@Paytm Airtel Mobile Recharge"
+          },
+          {
+            "amount": "1180.00",
+            "balance": "9259.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-23",
+            "narration": "FUND TRANSFER UTR 2036419610000005 TRF"
+          },
+          {
+            "amount": "-10.00",
+            "balance": "9249.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-23",
+            "narration": "IMPS OUTWARD ORG UPI To rajatsrivastavaX0786@okaxis,REF NO - 020221715697, UPI"
+          },
+          {
+            "amount": "10.00",
+            "balance": "9259.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-03-23",
+            "narration": "IMPS INWARD ORG UPI From rajatsrivastava00786@okaxis,REF NO - 020221733207, UPI"
+          },
+          {
+            "amount": "36880.00",
+            "balance": "46139.15",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-04-02",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "-6265.00",
+            "balance": "39874.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-04-03",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 021312543140, Rent uh akka"
+          },
+          {
+            "amount": "-39000.00",
+            "balance": "874.15",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-04-04",
+            "narration": "Payment for Credit Card No. 4386XXX5XXXX8636 "
+          },
+          {
+            "amount": "19047.00",
+            "balance": "19921.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-04-04",
+            "narration": "IMPS INWARD ORG UPI From 8883183626@paytm,REF NO - 021467051555, NA"
+          },
+          {
+            "amount": "-8212.00",
+            "balance": "11709.15",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-04-04",
+            "narration": "Payment for Credit Card No. 4386XXX5XXXX8636 "
+          },
+          {
+            "amount": "-104.00",
+            "balance": "11605.15",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-04-08",
+            "narration": "IMPS OUTWARD ORG UPI To paytm -ptmbbp@paytm,REF NO - XXXXXXXX7910, Oid11463336982@Paytm Utilities"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "10605.15",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-04-08",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX1213@ybl,REF NO - 021839065405, Payment from PhonePe"
+          },
+          {
+            "amount": "-3000.00",
+            "balance": "7605.15",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-04-08",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 05AUG1513 Card No.: 5497XXX0XXXX9807 of  05AUG20 Ref: 4245 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-149.00",
+            "balance": "7456.15",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-04-10",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 022037598549, Oid11473972898@Paytm Airtel Mobile Recharge"
+          },
+          {
+            "amount": "-50.00",
+            "balance": "7406.15",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-04-13",
+            "narration": "IMPS OUTWARD ORG UPI To kgyqde2861@paytm,REF NO - 022048148554, Oid11440390563@Paytm BSNL Mobile Recharge"
+          },
+          {
+            "amount": "-483.39",
+            "balance": "6922.76",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-04-15",
+            "narration": "PURCHASE SUBJECT: MCUPOS 07AUG2148 Card no.: 5497XXX0XXXX9807 07AUG20 214809 AmazonE/510 CRYSTAL PLAZA NEW Ref: 080716285429"
+          },
+          {
+            "amount": "-99.00",
+            "balance": "6823.76",
+            "category": "Entertainment",
+            "chqNo": "",
+            "date": "2024-04-16",
+            "narration": "PURCHASE SUBJECT: MCUPOS 11AUG0000 Card no.: 5497XXX0XXXX9807 11AUG20 223450 GOOGLE *YouTube Music1600 Amp Ref: 022442422774"
+          },
+          {
+            "amount": "-49.00",
+            "balance": "6774.76",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-04-17",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 022727271872, Oid11507040941@Paytm Airtel Mobile Recharge"
+          },
+          {
+            "amount": "500.00",
+            "balance": "7274.76",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-04-22",
+            "narration": "IMPS INWARD ORG UPI From 9994084654@ybl,REF NO - 023216692726, Payment from PhonePe"
+          },
+          {
+            "amount": "-555.00",
+            "balance": "6719.76",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-04-23",
+            "narration": "IMPS OUTWARD ORG UPI To paybil3066@paytm,REF NO - 023299691307, Oid11532619401@Paytm Recharge or Bill payment"
+          },
+          {
+            "amount": "-1200.00",
+            "balance": "5519.76",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-04-24",
+            "narration": "PURCHASE SUBJECT: MCUPOS 19AUG1651 Card no.: 5497XXX0XXXX9807 19AUG20 165104 SARATHA SNO : 45 NSB ROAD TIR Ref: 081900018355"
+          },
+          {
+            "amount": "-51.00",
+            "balance": "5468.76",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-04-28",
+            "narration": "IMPS OUTWARD ORG UPI To EURONET@ybl,REF NO - XXXXXXXX8262, Payment for category Id Mobile"
+          },
+          {
+            "amount": "36880.00",
+            "balance": "42348.76",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-05-02",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "-4500.00",
+            "balance": "37848.76",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-05-02",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 024215051344, Rent uh"
+          },
+          {
+            "amount": "-24475.78",
+            "balance": "13372.98",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-05-02",
+            "narration": "IMPS OUTWARD ORG UPI To credclub@icici,REF NO - XXXXXXXX6851, credit card bill payment on CRED"
+          },
+          {
+            "amount": "-6000.00",
+            "balance": "7372.98",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-05-04",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXXXXX8455@cnrb0001285.ifsc.npci,REF NO - 024416865991, UPI"
+          },
+          {
+            "amount": "5.00",
+            "balance": "7377.98",
+            "category": "Cash Back",
+            "chqNo": "",
+            "date": "2024-05-04",
+            "narration": "IMPS INWARD ORG UPI From goog -payment@okaxis,REF NO - 024416940595, Rewarded for paying with Google Pay"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "6377.98",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-05-07",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX1213@ybl,REF NO - 024780665749, Payment from PhonePe"
+          },
+          {
+            "amount": "-149.00",
+            "balance": "6228.98",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-05-08",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 024801435565, Oid11682714794@Paytm Airtel Recharge"
+          },
+          {
+            "amount": "-131.00",
+            "balance": "6097.98",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-05-08",
+            "narration": "IMPS OUTWARD ORG UPI To paytm -ptmbbp@paytm,REF NO - XXXXXXXX1004, Oid11641760555@Paytm Utilities"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "5097.98",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-05-08",
+            "narration": "IMPS OUTWARD ORG UPI To adishgiri94@oksbi,REF NO - 024814356485, UPI"
+          },
+          {
+            "amount": "-557.00",
+            "balance": "4540.98",
+            "category": "Food",
+            "chqNo": "",
+            "date": "2024-05-09",
+            "narration": "IMPS OUTWARD ORG UPI To zomato -order@paytm,REF NO - XXXXXXXX7135, Zomato payment"
+          },
+          {
+            "amount": "6650.00",
+            "balance": "11190.98",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-05-11",
+            "narration": "IMPS INWARD ORG UPI From 8883183626@paytm,REF NO - 025038732137, NA"
+          },
+          {
+            "amount": "-4500.00",
+            "balance": "6690.98",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-05-11",
+            "narration": "IMPS OUTWARD ORG UPI To chc.anbu -1@okaxis,REF NO - 025020321883, Car"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "5690.98",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-05-18",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 12SEP0915 Card No.: 5497XXX0XXXX9807 of 12SEP20 Ref: 8551 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-30.67",
+            "balance": "5660.31",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-05-18",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 025744144861, Oid11812129218@Paytm Airtel Recharge"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "4660.31",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-05-19",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 15SEP1906 Card No.: 5497XXX0XXXX9807 of 15SEP20 Ref: 8956 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-99.00",
+            "balance": "4561.31",
+            "category": "Entertainment",
+            "chqNo": "",
+            "date": "2024-05-19",
+            "narration": "PURCHASE SUBJECT: MCUPOS 11SEP0000 Card no.: 5497XXX0XXXX9807 11SEP20 223450 GOOGLE *YouTube Music1600 Amp Ref: 025566667227"
+          },
+          {
+            "amount": "-300.00",
+            "balance": "4261.31",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-05-22",
+            "narration": "IMPS OUTWARD ORG UPI To amulyareddy666@okicici,REF NO - 026212725931, UPI"
+          },
+          {
+            "amount": "-51.00",
+            "balance": "4210.31",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-05-22",
+            "narration": "IMPS OUTWARD ORG UPI To jio@yesbank,REF NO - XXXXXXXX8333, JIO20BR00057KN93218092020T155050E0360"
+          },
+          {
+            "amount": "-1500.00",
+            "balance": "2710.31",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-05-29",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX4654@ybl,REF NO - 026936491602, Payment from PhonePe"
+          },
+          {
+            "amount": "-0.59",
+            "balance": "2709.72",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-02",
+            "narration": "RDY CR SWEEP Monthly principal payment for Ready credit A/c, Dr.SA Rs. 0.59"
+          },
+          {
+            "amount": "40750.00",
+            "balance": "43459.72",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-06-03",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "-5500.00",
+            "balance": "37959.72",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-03",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 027414803404, UPI"
+          },
+          {
+            "amount": "-10284.56",
+            "balance": "27675.16",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-06-03",
+            "narration": "Payment for Credit Card No. 4386XXX5XXXX8636 "
+          },
+          {
+            "amount": "57.00",
+            "balance": "27732.16",
+            "category": "Interest",
+            "chqNo": "",
+            "date": "2024-06-03",
+            "narration": "Interest Earned during the Period: 01JUL2020 - 30SEP2020 for Savings account"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "17732.16",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-06-04",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 01OCT1828 Card No.: 5497XXX0XXXX9807 of 01OCT20 Ref: 9821 SRIRANGAM BRANCH IADTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-149.00",
+            "balance": "17583.16",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-06-04",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 027530054354, Oid11936878955@Paytm Airtel Recharge"
+          },
+          {
+            "amount": "80.00",
+            "balance": "17663.16",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-08",
+            "narration": "IMPS INWARD ORG UPI From praveenpk123@ybl,REF NO - 027846935151, Payment from PhonePe"
+          },
+          {
+            "amount": "-131.00",
+            "balance": "17532.16",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-06-08",
+            "narration": "IMPS OUTWARD ORG UPI To paytm -ptmbbp@paytm,REF NO - XXXXXXXX5773, Oid12001565671@Paytm Utilities"
+          },
+          {
+            "amount": "-555.00",
+            "balance": "16977.16",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-06-08",
+            "narration": "IMPS OUTWARD ORG UPI To jio@yesbank,REF NO - XXXXXXXX0077, Payment from PhonePe"
+          },
+          {
+            "amount": "-51.00",
+            "balance": "16926.16",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-06-08",
+            "narration": "IMPS OUTWARD ORG UPI To jio@yesbank,REF NO - XXXXXXXX0157, JIO20BR0005A4YMD005102020T124553E0360"
+          },
+          {
+            "amount": "131.00",
+            "balance": "17057.16",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-08",
+            "narration": "IMPS INWARD ORG UPI From paytm -ptmbbp@paytm,REF NO - 027995293097, express"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "16057.16",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-09",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX1213@ybl,REF NO - 028059685690, Payment from PhonePe"
+          },
+          {
+            "amount": "-550.00",
+            "balance": "15507.16",
+            "category": "Clothing",
+            "chqNo": "",
+            "date": "2024-06-10",
+            "narration": "IMPS OUTWARD ORG UPI To adishgiri94@oksbi,REF NO - 028022387663, Dress"
+          },
+          {
+            "amount": "-131.00",
+            "balance": "15376.16",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-06-12",
+            "narration": "IMPS OUTWARD ORG UPI To paytm -ptmbbp@paytm,REF NO - XXXXXXXX8970, Oid12006122312@Paytm Utilities"
+          },
+          {
+            "amount": "-2000.00",
+            "balance": "13376.16",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-06-15",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 11OCT1427 Card No.: 5497XXX0XXXX9807 of 11OCT20 Ref: 1961 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-362.00",
+            "balance": "13014.16",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-17",
+            "narration": "IMPS OUTWARD ORG UPI To QXXXX6174@ybl,REF NO - 028846564290, NA"
+          },
+          {
+            "amount": "50.00",
+            "balance": "13064.16",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-19",
+            "narration": "IMPS INWARD ORG UPI From aadhimohan.161@okaxis,REF NO - 029014255868, Just Checking"
+          },
+          {
+            "amount": "10000.00",
+            "balance": "23064.16",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-19",
+            "narration": "IMPS INWARD ORG IMPSTO from GOMATHI V ICICI BANK LIMITED REF NO: - 029014311353"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "13064.16",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-19",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX4654@ybl,REF NO - 029056021367, Payment from PhonePe"
+          },
+          {
+            "amount": "-99.00",
+            "balance": "12965.16",
+            "category": "Entertainment",
+            "chqNo": "",
+            "date": "2024-06-19",
+            "narration": "PURCHASE SUBJECT: MCUPOS 12OCT0000 Card no.: 5497XXX0XXXX9807 12OCT20 222311 GOOGLE *YouTube Music1600 Amp Ref: 028642423484"
+          },
+          {
+            "amount": "-4.95",
+            "balance": "12960.21",
+            "category": "Travel",
+            "chqNo": "",
+            "date": "2024-06-19",
+            "narration": "TAX COLLECTED TCS Deducted Rs.4.95 on LRS amount Rs.99.00 for OTHER TRAVEL INCLUDING HOLIDAY TRIPS AND PAYMENTS FO"
+          },
+          {
+            "amount": "-49.00",
+            "balance": "12911.21",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-06-22",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 029328690291, Oid12023095506@Paytm Airtel Recharge"
+          },
+          {
+            "amount": "2000.00",
+            "balance": "14911.21",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-29",
+            "narration": "IMPS INWARD ORG UPI From 9842052864@ybl,REF NO - 029939285550, Payment from PhonePe"
+          },
+          {
+            "amount": "-2000.00",
+            "balance": "12911.21",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-06-29",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX4654@ybl,REF NO - 029931454658, Payment from PhonePe"
+          },
+          {
+            "amount": "-0.56",
+            "balance": "12910.65",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-02",
+            "narration": "RDY CR SWEEP Monthly principal payment for Ready credit A/c, Dr.SA Rs. 0.56"
+          },
+          {
+            "amount": "-149.00",
+            "balance": "12761.65",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-07-03",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 030412950601, Oid12078783258@Paytm Airtel Recharge"
+          },
+          {
+            "amount": "57810.00",
+            "balance": "70571.65",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-07-04",
+            "narration": "SALARY CREDIT SALARY CREDIT FROM"
+          },
+          {
+            "amount": "-5000.00",
+            "balance": "65571.65",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-06",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 030609095201, UPI"
+          },
+          {
+            "amount": "-8805.21",
+            "balance": "56766.44",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-07-06",
+            "narration": "IMPS OUTWARD ORG UPI To credclub@icici,REF NO - XXXXXXXX0077, credit card bill payment on CRED"
+          },
+          {
+            "amount": "-517.00",
+            "balance": "56249.44",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-06",
+            "narration": "PURCHASE SUBJECT: MCUPOS 30OCT2154 Card no.: 5497XXX0XXXX9807 30OCT20 215447 SRI GOWRI KRISHNAA SRI GOW Ref: 002851923748"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "46249.44",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-06",
+            "narration": "IMPS OUTWARD ORG UPI To gunagsdme1995@oksbi,REF NO - 030720272349, Roof sheet"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "36249.44",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-06",
+            "narration": "IMPS OUTWARD ORG UPI To gunagsdme1995@oksbi,REF NO - 030720292392, Roof sheet"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "26249.44",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-06",
+            "narration": "IMPS OUTWARD ORG UPI To gunagsdme1995@oksbi,REF NO - 030720353474, Roof sheet"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "25249.44",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-08",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX1213@ybl,REF NO - 030990961449, Payment from PhonePe"
+          },
+          {
+            "amount": "-2500.00",
+            "balance": "22749.44",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-07-11",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 07NOV1522 Card No.: 5497XXX0XXXX9807 of 07NOV20 Ref: 4810 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "140.00",
+            "balance": "22889.44",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-11",
+            "narration": "IMPS INWARD ORG UPI From dhuraipriyadharshini1161131@okaxis,REF NO - 031216505714, Thanks annna"
+          },
+          {
+            "amount": "5.00",
+            "balance": "22894.44",
+            "category": "Cash Back",
+            "chqNo": "",
+            "date": "2024-07-13",
+            "narration": "IMPS INWARD ORG UPI From goog -payment@okaxis,REF NO - 031415897208, Rewarded for paying with Google Pay"
+          },
+          {
+            "amount": "90.00",
+            "balance": "22984.44",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-13",
+            "narration": "IMPS INWARD ORG UPI From praveen.srini95@oksbi,REF NO - 031421175256, Splitwise"
+          },
+          {
+            "amount": "5.00",
+            "balance": "22989.44",
+            "category": "Cash Back",
+            "chqNo": "",
+            "date": "2024-07-14",
+            "narration": "IMPS INWARD ORG UPI From goog -payment@okaxis,REF NO - 031521617621, Rewarded for paying with Google Pay"
+          },
+          {
+            "amount": "-608.00",
+            "balance": "22381.44",
+            "category": "Food",
+            "chqNo": "",
+            "date": "2024-07-15",
+            "narration": "PURCHASE SUBJECT: MCUPOS 07NOV2057 Card no.: 5497XXX0XXXX9807 07NOV20 205747 KFC SAPPHIRE.KFC GROUND FLOOR Ref: 110700043471"
+          },
+          {
+            "amount": "-2503.00",
+            "balance": "19878.44",
+            "category": "Clothing",
+            "chqNo": "",
+            "date": "2024-07-15",
+            "narration": "PURCHASE SUBJECT: MCUPOS 08NOV2030 Card no.: 5497XXX0XXXX9807 08NOV20 203032 RELIANCE TRENDSTV43SRIRANGAMC Ref: 110800006046"
+          },
+          {
+            "amount": "-555.00",
+            "balance": "19323.44",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-07-15",
+            "narration": "IMPS OUTWARD ORG UPI To paybil3066@paytm,REF NO - 031675632235, Oid12252518055@Paytm Recharge or Bill payment"
+          },
+          {
+            "amount": "-51.00",
+            "balance": "19272.44",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-07-17",
+            "narration": "IMPS OUTWARD ORG UPI To paybil3066@paytm,REF NO - 031821429245, Oid12183382774@Paytm Recharge or Bill payment"
+          },
+          {
+            "amount": "-99.00",
+            "balance": "19173.44",
+            "category": "Entertainment",
+            "chqNo": "",
+            "date": "2024-07-17",
+            "narration": "PURCHASE SUBJECT: MCUPOS 11NOV0000 Card no.: 5497XXX0XXXX9807 11NOV20 223450 GOOGLE *YouTube Music1600 Amp Ref: 031676769780"
+          },
+          {
+            "amount": "-4.95",
+            "balance": "19168.49",
+            "category": "Travel",
+            "chqNo": "",
+            "date": "2024-07-17",
+            "narration": "TAX COLLECTED TCS Deducted Rs.4.95 on LRS amount Rs.99.00 for OTHER TRAVEL INCLUDING HOLIDAY TRIPS AND PAYMENTS FO"
+          },
+          {
+            "amount": "5.00",
+            "balance": "19173.49",
+            "category": "Cash Back",
+            "chqNo": "",
+            "date": "2024-07-20",
+            "narration": "IMPS INWARD ORG UPI From goog -payment@okaxis,REF NO - 032003890347, Rewarded for paying with Google Pay"
+          },
+          {
+            "amount": "10.00",
+            "balance": "19183.49",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-21",
+            "narration": "IMPS INWARD ORG UPI From arunsathies2007@okicici,REF NO - 032219231583, UPI"
+          },
+          {
+            "amount": "8000.00",
+            "balance": "27183.49",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-21",
+            "narration": "IMPS INWARD ORG UPI From arunsathies2007@okicici,REF NO - 032219237454, UPI"
+          },
+          {
+            "amount": "-22500.00",
+            "balance": "4683.49",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-07-21",
+            "narration": "Payment for Credit Card No. 4386XXX5XXXX8636 "
+          },
+          {
+            "amount": "-567.00",
+            "balance": "4116.49",
+            "category": "Insurance",
+            "chqNo": "",
+            "date": "2024-07-23",
+            "narration": "PURCHASE SUBJECT: MCUPOS 16NOV2022 Card no.: 5497XXX0XXXX9807 16NOV20 202243 CCA *BAJAJALLIANZCCMUMBAI Ref: 111630074470"
+          },
+          {
+            "amount": "-75.00",
+            "balance": "4041.49",
+            "category": "Entertainment",
+            "chqNo": "",
+            "date": "2024-07-27",
+            "narration": "PURCHASE SUBJECT: MCUPOS 20NOV0000 Card no.: 5497XXX0XXXX9807 20NOV20 144740 APPLE.COM/BILLHollyhill Estat Ref: 032575755444"
+          },
+          {
+            "amount": "-3.75",
+            "balance": "4037.74",
+            "category": "Travel",
+            "chqNo": "",
+            "date": "2024-07-27",
+            "narration": "TAX COLLECTED TCS Deducted Rs.3.75 on LRS amount Rs.75.00 for OTHER TRAVEL INCLUDING HOLIDAY TRIPS AND PAYMENTS FO"
+          },
+          {
+            "amount": "-200.00",
+            "balance": "3837.74",
+            "category": "Fuel",
+            "chqNo": "",
+            "date": "2024-07-27",
+            "narration": "PURCHASE SUBJECT: MCUPOS 20NOV2026 Card no.: 5497XXX0XXXX9807 20NOV20 202640 BPCL TAJMAHAL ENTERPRIBHARATH Ref: 112000017947"
+          },
+          {
+            "amount": "1.50",
+            "balance": "3839.24",
+            "category": "Reversal",
+            "chqNo": "",
+            "date": "2024-07-28",
+            "narration": "PURCHASE REVERSAL SUBJECT: MCUPOS 20NOV2026 Card no.: 5497XXX0XXXX9807 20NOV20 202640 BPCL TAJMAHAL ENTERPRIBHARATH Ref: 112000017947"
+          },
+          {
+            "amount": "-51.00",
+            "balance": "3788.24",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-28",
+            "narration": "PURCHASE SUBJECT: MCUPOS 21NOV1310 Card no.: 5497XXX0XXXX9807 21NOV20 131004 PTM*PAYTMB121 SECTOR 5NOIDA Ref: 112169031103"
+          },
+          {
+            "amount": "-1900.00",
+            "balance": "1888.24",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-29",
+            "narration": "PURCHASE SUBJECT: MCUPOS 23NOV1619 Card no.: 5497XXX0XXXX9807 23NOV20 161919 CONSOLIDATED PREMIUM RNO 11 C Ref: 032810064150"
+          },
+          {
+            "amount": "61001.00",
+            "balance": "62889.24",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-07-31",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "-10000.00",
+            "balance": "52889.24",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-07-31",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 27NOV1738 Card No.: 5497XXX0XXXX9807 of 27NOV20 Ref: 1080 SRIRANGAM BRANCH IADTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-5000.00",
+            "balance": "47889.24",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-07-31",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 27NOV1739 Card No.: 5497XXX0XXXX9807 of 27NOV20 Ref: 1081 SRIRANGAM BRANCH IADTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-0.53",
+            "balance": "47888.71",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-07-31",
+            "narration": "RDY CR SWEEP Monthly principal payment for Ready credit A/c, Dr.SA Rs. 0.53"
+          },
+          {
+            "amount": "-11175.15",
+            "balance": "36713.56",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-08-03",
+            "narration": "IMPS OUTWARD ORG UPI To credclub@icici,REF NO - XXXXXXXX5958, credit card bill payment on CRED"
+          },
+          {
+            "amount": "-4500.00",
+            "balance": "32213.56",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-03",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 033311135848, rent uh"
+          },
+          {
+            "amount": "-5.00",
+            "balance": "32208.56",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-03",
+            "narration": "IMPS OUTWARD ORG UPI To aadhimohan.161@okaxis,REF NO - 033517079461, UPI"
+          },
+          {
+            "amount": "-8000.00",
+            "balance": "24208.56",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-03",
+            "narration": "IMPS OUTWARD ORG UPI To aadhimohan.161@okaxis,REF NO - 033517086268, UPI"
+          },
+          {
+            "amount": "-200.00",
+            "balance": "24008.56",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-05",
+            "narration": "PURCHASE SUBJECT: MCUPOS 27NOV2126 Card no.: 5497XXX0XXXX9807 27NOV20 212617 SHRI RENGANATHAN MOTERSHRI RE Ref: 002927049061"
+          },
+          {
+            "amount": "1.50",
+            "balance": "24010.06",
+            "category": "Reversal",
+            "chqNo": "",
+            "date": "2024-08-05",
+            "narration": "PURCHASE REVERSAL SUBJECT: MCUPOS 27NOV2126 Card no.: 5497XXX0XXXX9807 27NOV20 212617 SHRI RENGANATHAN MOTERSHRI RE Ref: 002927049061"
+          },
+          {
+            "amount": "-1000.00",
+            "balance": "23010.06",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-08",
+            "narration": "IMPS OUTWARD ORG UPI To logeshwaran.balu@ybl,REF NO - XXXXXXXX1855, Payment from PhonePe"
+          },
+          {
+            "amount": "-2000.00",
+            "balance": "21010.06",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-08-10",
+            "narration": "ATM WITHDRAWAL SUBJECT: EURONT 07DEC1858 Card No.: 5497XXX0XXXX9807 of 07DEC20 Ref: 7894 SRIRANGAM ATMTIRUCHIRAPALLTNIN"
+          },
+          {
+            "amount": "-200.00",
+            "balance": "20810.06",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-13",
+            "narration": "PURCHASE SUBJECT: MCUPOS 08DEC1825 Card no.: 5497XXX0XXXX9807 08DEC20 182501 SHRI RENGANATHAN MOTERSHRI RE Ref: 002956352103"
+          },
+          {
+            "amount": "1.50",
+            "balance": "20811.56",
+            "category": "Reversal",
+            "chqNo": "",
+            "date": "2024-08-13",
+            "narration": "PURCHASE REVERSAL SUBJECT: MCUPOS 08DEC1825 Card no.: 5497XXX0XXXX9807 08DEC20 182501 SHRI RENGANATHAN MOTERSHRI RE Ref: 002956352103"
+          },
+          {
+            "amount": "-99.00",
+            "balance": "20712.56",
+            "category": "Entertainment",
+            "chqNo": "",
+            "date": "2024-08-20",
+            "narration": "PURCHASE SUBJECT: MCUPOS 11DEC0000 Card no.: 5497XXX0XXXX9807 11DEC20 223450 GOOGLE *YouTube Music1600 Amp Ref: 034667671818"
+          },
+          {
+            "amount": "-4.95",
+            "balance": "20707.61",
+            "category": "Travel",
+            "chqNo": "",
+            "date": "2024-08-20",
+            "narration": "TAX COLLECTED TCS Deducted Rs.4.95 on LRS amount Rs.99.00 for OTHER TRAVEL INCLUDING HOLIDAY TRIPS AND PAYMENTS FO"
+          },
+          {
+            "amount": "1500.00",
+            "balance": "22207.61",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-24",
+            "narration": "IMPS INWARD ORG UPI From jagan6211@okicici,REF NO - 035614447293, Venu briyani"
+          },
+          {
+            "amount": "-2000.00",
+            "balance": "20207.61",
+            "category": "Cash Withdrawal",
+            "chqNo": "",
+            "date": "2024-08-25",
+            "narration": "ATM WITHDRAWAL SUBJECT: NFSATM 22DEC0305 Card No.: 5497XXX0XXXX9807 of 22DEC20 Ref: 035708328519 Karur Main RoadTrichy TIIN"
+          },
+          {
+            "amount": "-75.00",
+            "balance": "20132.61",
+            "category": "Entertainment",
+            "chqNo": "",
+            "date": "2024-08-25",
+            "narration": "PURCHASE SUBJECT: MCUPOS 20DEC0000 Card no.: 5497XXX0XXXX9807 20DEC20 064911 APPLE.COM/BILLHollyhill Estat Ref: 035572726716"
+          },
+          {
+            "amount": "-3.75",
+            "balance": "20128.86",
+            "category": "Travel",
+            "chqNo": "",
+            "date": "2024-08-25",
+            "narration": "TAX COLLECTED TCS Deducted Rs.3.75 on LRS amount Rs.75.00 for OTHER TRAVEL INCLUDING HOLIDAY TRIPS AND PAYMENTS FO"
+          },
+          {
+            "amount": "-149.00",
+            "balance": "19979.86",
+            "category": "Utilities",
+            "chqNo": "",
+            "date": "2024-08-31",
+            "narration": "IMPS OUTWARD ORG UPI To payair7673@paytm,REF NO - 035922075503, Oid12376996595@Paytm Airtel Recharge"
+          },
+          {
+            "amount": "-100.00",
+            "balance": "19879.86",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-31",
+            "narration": "IMPS OUTWARD ORG UPI To QXXXX0566@ybl,REF NO - 036064565206, Payment from PhonePe"
+          },
+          {
+            "amount": "-120.00",
+            "balance": "19759.86",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-31",
+            "narration": "IMPS OUTWARD ORG UPI To QXXXX0505@ybl,REF NO - 036087798108, Payment from PhonePe"
+          },
+          {
+            "amount": "-325.00",
+            "balance": "19434.86",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-31",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 036309128500, aanamalai"
+          },
+          {
+            "amount": "1634.66",
+            "balance": "21069.52",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-31",
+            "narration": "IMPS INWARD ORG UPI From 01adithya@okicici,REF NO - 036310339732, Pollachi trip"
+          },
+          {
+            "amount": "-120.00",
+            "balance": "20949.52",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-31",
+            "narration": "IMPS OUTWARD ORG UPI To XXXXXX4863@ybl,REF NO - 036380993448, Payment from PhonePe"
+          },
+          {
+            "amount": "-125.00",
+            "balance": "20824.52",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-31",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 036313375962, venu"
+          },
+          {
+            "amount": "214.00",
+            "balance": "21038.52",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-08-31",
+            "narration": "IMPS INWARD ORG UPI From 01adithya@okicici,REF NO - 036321372873, UPI"
+          },
+          {
+            "amount": "-0.51",
+            "balance": "21038.01",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-09-01",
+            "narration": "RDY CR SWEEP Monthly principal payment for Ready credit A/c, Dr.SA Rs. 0.51"
+          },
+          {
+            "amount": "57950.00",
+            "balance": "78988.01",
+            "category": "Salary",
+            "chqNo": "",
+            "date": "2024-09-02",
+            "narration": "SALARY CREDIT SALARY CREDIT"
+          },
+          {
+            "amount": "-4500.00",
+            "balance": "74488.01",
+            "category": "Others",
+            "chqNo": "",
+            "date": "2024-09-03",
+            "narration": "IMPS OUTWARD ORG UPI To jagan6211@okicici,REF NO - 036621004421, rent uh"
+          },
+          {
+            "amount": "-8982.84",
+            "balance": "65505.17",
+            "category": "Credit Card Payment",
+            "chqNo": "",
+            "date": "2024-09-03",
+            "narration": "IMPS OUTWARD ORG UPI To cred@axisb,REF NO - XXXXXXXX9248, credit card bill payment on CRED"
+          },
+          {
+            "amount": "136.00",
+            "balance": "65641.17",
+            "category": "Interest",
+            "chqNo": "",
+            "date": "2024-09-03",
+            "narration": "Interest Earned during the Period: 01OCT2020 - 31DEC2020 for Savings account"
+          }
+        ]
+      }
+    }

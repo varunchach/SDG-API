@@ -1,0 +1,116 @@
+{
+  "contextParameter": {
+    "partnerJourneyID": "1234556789",
+    "bankJourneyID": "1234556789",
+    "orcJourneyID": "WF-_9348b08f-cf6f-4002-9568-1cf8ae1d81be51314212199806",
+    "partnerID": "HDFCBANK",
+    "channelID": "CHANNEL_FYNDNA_HL1",
+    "productName": "FYNDNA_HL1"
+  },
+  "statusCode":"0",
+  "statusMsg":"Success",
+  "userType": "applicant,coapplicant",
+  "userIndex":"0,1,2",
+  "reportType":"hunter",
+  "hunter": {
+	  "Body" : {
+		"MatchResponse" : {
+		  "MatchResult" : {
+			"ResultBlock" : {
+			  "MatchSummary" : {
+				"matches" : "1",
+				"TotalMatchScore" : "1060",
+				"Rules" : {
+				  "totalRuleCount" : "12",
+				  "Rule" : [ {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_APP",
+					"Score" : "90"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_BAN",
+					"Score" : "90"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_HOM",
+					"Score" : "90"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_MOB",
+					"Score" : "90"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_ORG_ADD",
+					"Score" : "90"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_ORG_TEL",
+					"Score" : "90"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_PAN",
+					"Score" : "90"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_PER_ADD",
+					"Score" : "90"
+				  }, {
+					"ruleCount" : "2",
+					"isGlobal" : "1",
+					"RuleID" : "NH_INC_PAN_PER",
+					"Score" : "70"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_BUS2_DEC",
+					"Score" : "100"
+				  }, {
+					"ruleCount" : "1",
+					"isGlobal" : "1",
+					"RuleID" : "NH_NC_APP_PAN",
+					"Score" : "100"
+				  } ]
+				},
+				"MatchSchemes" : {
+				  "schemeCount" : "3",
+				  "Scheme" : [ {
+					"SchemeID" : "1562",
+					"Score" : "90"
+				  }, {
+					"SchemeID" : "2259",
+					"Score" : "140"
+				  }, {
+					"SchemeID" : "2260",
+					"Score" : "830"
+				  } ]
+				}
+			  },
+			  "ErrorWarnings" : {
+				"Errors" : {
+				  "errorCount" : "0"
+				},
+				"Warnings" : {
+				  "warningCount" : "1",
+				  "Warning" : {
+					"Number" : "102009",
+					"Message" : "Match schemes not used",
+					"Values" : {
+					  "Value" : [ "28", "318", "234", "64", "764", "858", "532", "533", "676", "973", "1181", "1262", "1167", "1571", "1674", "1727", "1800", "1563", "1598", "1780", "1638", "1637", "1597", "1659", "1675", "1768", "1673", "2054", "2160", "2163", "2162", "2165", "2164", "2166", "2167", "2161", "2261", "2276", "2272", "2273", "2275", "317", "22", "56", "268", "78", "93", "94", "923", "634", "763", "677", "678", "679", "680", "1164", "1165", "1445", "1323", "1850", "1851", "1852", "1853", "1723", "1724", "1725", "1861", "1863", "1864", "1507", "1565", "1797", "1847", "1849", "1782", "1798", "1799", "1858", "1859", "1860", "1796", "1833", "1854", "1855", "1856", "2051", "2262", "2266", "2267", "2268", "2263", "2264", "2265", "2269" ]
+					}
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+	}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "thin-file",
+  "description": "Thin credit file — CIBIL score -1",
+  "mbCibil": {
+    "score": "-1",
+    "subjectReturnCode": "FOUND"
+  },
+  "mbEquifax": {
+    "errorMsg": ""
+  },
+  "mbHighMark": {
+    "statusIq": "SUCCESS"
+  },
+  "posidex": {
+    "matchCount": 0,
+    "soaStatus": "No Match"
+  },
+  "hunter": {
+    "matches": "0",
+    "totalMatchScore": "0"
+  },
+  "perfios": {
+    "grade": "BBB",
+    "medianSalary": "25000"
+  }
+}

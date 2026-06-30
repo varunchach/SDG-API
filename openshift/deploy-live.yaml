@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: List
+metadata:
+  resourceVersion: ""
+items:
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    metadata:
+      name: hdfc-eligibility-live
+      labels:
+        app: hdfc-eligibility-live
+  - apiVersion: build.openshift.io/v1
+    kind: BuildConfig
+    metadata:
+      name: hdfc-eligibility-live
+      labels:
+        app: hdfc-eligibility-live
+    spec:
+      source:
+        type: Binary
+      strategy:
+        type: Docker
+        dockerStrategy:
+          dockerfilePath: Dockerfile.live
+      output:
+        to:
+          kind: DockerImage
+          name: image-registry.openshift-image-registry.svc:5000/default/hdfc-eligibility-live:latest
+      triggers: []
+  - apiVersion: v1
+    kind: PersistentVolumeClaim
+    metadata:
+      name: hdfc-eligibility-live-csv
+      labels:
+        app: hdfc-eligibility-live
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: hdfc-eligibility-live
+      labels:
+        app: hdfc-eligibility-live
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: hdfc-eligibility-live
+      template:
+        metadata:
+          labels:
+            app: hdfc-eligibility-live
+        spec:
+          containers:
+            - name: app
+              image: image-registry.openshift-image-registry.svc:5000/default/hdfc-eligibility-live:latest
+              imagePullPolicy: Always
+              ports:
+                - containerPort: 8080
+              env:
+                - name: CALLBACK_DELAY_SECONDS
+                  value: "3"
+                - name: CSV_STORAGE_BACKEND
+                  value: "local"
+                - name: CSV_STORAGE_PATH
+                  value: "/data/records/eligibility-records.csv"
+              volumeMounts:
+                - name: csv-data
+                  mountPath: /data/records
+              readinessProbe:
+                httpGet:
+                  path: /api/health
+                  port: 8080
+                initialDelaySeconds: 10
+                periodSeconds: 10
+              livenessProbe:
+                httpGet:
+                  path: /api/health
+                  port: 8080
+                initialDelaySeconds: 20
+                periodSeconds: 30
+              resources:
+                requests:
+                  memory: 256Mi
+                  cpu: 100m
+                limits:
+                  memory: 512Mi
+                  cpu: 500m
+          volumes:
+            - name: csv-data
+              persistentVolumeClaim:
+                claimName: hdfc-eligibility-live-csv
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: hdfc-eligibility-live
+      labels:
+        app: hdfc-eligibility-live
+    spec:
+      selector:
+        app: hdfc-eligibility-live
+      ports:
+        - name: http
+          port: 8080
+          targetPort: 8080
+  - apiVersion: route.openshift.io/v1
+    kind: Route
+    metadata:
+      name: hdfc-eligibility-live
+      labels:
+        app: hdfc-eligibility-live
+    spec:
+      to:
+        kind: Service
+        name: hdfc-eligibility-live
+      port:
+        targetPort: http
+      tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect

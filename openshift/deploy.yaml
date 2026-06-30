@@ -1,0 +1,102 @@
+apiVersion: v1
+kind: List
+metadata:
+  resourceVersion: ""
+items:
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    metadata:
+      name: hdfc-eligibility-engine
+      labels:
+        app: hdfc-eligibility-engine
+  - apiVersion: build.openshift.io/v1
+    kind: BuildConfig
+    metadata:
+      name: hdfc-eligibility-engine
+      labels:
+        app: hdfc-eligibility-engine
+    spec:
+      source:
+        type: Binary
+      strategy:
+        type: Docker
+        dockerStrategy:
+          dockerfilePath: Dockerfile
+      output:
+        to:
+          kind: ImageStreamTag
+          name: hdfc-eligibility-engine:latest
+      triggers: []
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: hdfc-eligibility-engine
+      labels:
+        app: hdfc-eligibility-engine
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: hdfc-eligibility-engine
+      template:
+        metadata:
+          labels:
+            app: hdfc-eligibility-engine
+        spec:
+          containers:
+            - name: app
+              image: image-registry.openshift-image-registry.svc:5000/default/hdfc-eligibility-engine:latest
+              imagePullPolicy: Always
+              ports:
+                - containerPort: 8080
+                  protocol: TCP
+              env:
+                - name: CALLBACK_DELAY_SECONDS
+                  value: "3"
+              readinessProbe:
+                httpGet:
+                  path: /api/health
+                  port: 8080
+                initialDelaySeconds: 15
+                periodSeconds: 10
+              livenessProbe:
+                httpGet:
+                  path: /api/health
+                  port: 8080
+                initialDelaySeconds: 30
+                periodSeconds: 30
+              resources:
+                requests:
+                  memory: 256Mi
+                  cpu: 100m
+                limits:
+                  memory: 512Mi
+                  cpu: 500m
+  - apiVersion: v1
+    kind: Service
+    metadata:
+      name: hdfc-eligibility-engine
+      labels:
+        app: hdfc-eligibility-engine
+    spec:
+      selector:
+        app: hdfc-eligibility-engine
+      ports:
+        - name: http
+          port: 8080
+          targetPort: 8080
+  - apiVersion: route.openshift.io/v1
+    kind: Route
+    metadata:
+      name: hdfc-eligibility-engine
+      labels:
+        app: hdfc-eligibility-engine
+    spec:
+      to:
+        kind: Service
+        name: hdfc-eligibility-engine
+      port:
+        targetPort: http
+      tls:
+        termination: edge
+        insecureEdgeTerminationPolicy: Redirect

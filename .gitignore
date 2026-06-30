@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+*.egg-info/
+dist/
+build/
+
+# Generated batch output
+data/generated/*
+!data/generated/.gitkeep
+
+# Word temp files
+~$*
+docs/customer/~$*
+
+# IDE
+.idea/
+.vscode/
+
+# Local env
+.env
+.env.*

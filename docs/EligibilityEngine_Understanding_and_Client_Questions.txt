@@ -1,0 +1,221 @@
+Eligibility Engine — Mock Producer
+Our Understanding (for client review)
+Reference: EligibilityEngine_SpecDoc_SampleFiles/
+
+
+WHAT WE UNDERSTAND
+------------------
+
+We will build a Mock Eligibility Engine (Producer) that simulates the loan
+eligibility journey for testing. Two actors:
+
+  Partner  — sends Initiate Journey request, receives ACK + async callbacks
+  Producer — our Engine; accepts request, generates synthetic data, delivers
+             callbacks from all downstream systems
+
+For each journey the Engine will:
+  1. Return an immediate synchronous ACK (with orcJourneyID)
+  2. Generate and persist synthetic data for each producer system
+  3. Send async callbacks (~2 min delay) — one per subsystem
+  4. Send a final Summary callback
+
+All callback payloads follow the JSON structure in the sample files. Data is
+fully synthetic — for testing only, not real bureau or bank data.
+
+
+WORKFLOW
+--------
+
+Step 1 — Initiate Journey (sync)
+  Input: EE- initiate request V1.0.txt
+
+  Contains:
+    - contextParameter  (partnerJourneyID, bankJourneyID, partnerID, channelID,
+                         productName)
+    - applicant         (demographics, employment, banking, productDetails)
+    - coApplicants      (0..N co-borrowers, each with index)
+    - sourceApp
+
+  productDetails controls which producer systems are invoked:
+    multibureau  →  mbCibil, mbEquifax, mbHighMark, mbMbEot
+    perfios      →  bank statement / income analysis
+    posidex      →  customer dedupe / match
+    hunter       →  fraud detection
+
+Step 2 — Immediate ACK (sync)
+  Success: EE - Intiate Journey ACK resp.txt
+    - Echo partnerJourneyID, bankJourneyID
+    - Generate orcJourneyID (master workflow ID)
+    - statusCode "0"
+
+  Failure: EE-Sample Failure.txt
+    - statusCode "1" (e.g. "Technical Error- Service Down")
+    - No async callbacks follow
+
+Step 3 — Async callbacks (delayed)
+  One callback per invoked subsystem. Each includes contextParameter,
+  statusCode, statusMsg, userType, userIndex, reportType, and system payload:
+
+    reportType     Sample file
+    ----------     -----------
+    mbCibil        mbCibil Sample Callback.txt
+    mbEquifax      mbEquifax Sample Callback.txt
+    mbHighMark     mbHighMark Sample Callback.txt
+    mbMbEot        mbMbEot Sample Callback.txt
+    perfios        perfios Sample Callback.txt
+    posidex        posidex Sample Callback.txt
+    hunter         hunter Sample Callback.txt
+
+Step 4 — Summary (last)
+  reportType "summary" — per-applicant rollup (summary Sample Callback.txt)
+  Each system: Success | Failed | Late | Not Opted
+
+
+IDENTIFIERS — TWO LAYERS
+------------------------
+
+Layer 1 — Journey IDs (same in every callback contextParameter)
+  partnerJourneyID   from Partner request
+  bankJourneyID      from Partner request
+  orcJourneyID       generated at ACK; master key to fetch all related records
+
+Layer 2 — System IDs (unique per producer system / table)
+  MultiBureau (shared per journey)   APPLICATION-ID, CUST-ID, ACKNOWLEDGEMENT-ID
+  MultiBureau (per bureau)           TRACKING-ID (separate for CIBIL, Equifax,
+                                       HighMark)
+  MB EOT                             own APPLICATION-ID/CUST-ID; SENT-TO-CIBIL,
+                                       SENT-TO-EQUIFAX, SENT-TO-EXPERIAN,
+                                       SENT-TO-CHM flags
+  Perfios                            perfiosTransactionId, customerTransactionId,
+                                       txnId
+  Posidex                            SOA_APP_ID_C, SOA_MATCH_APPID_C,
+                                       SOA_FILE_NAME_C
+  Hunter                             RuleID, SchemeID, match scores
+
+Applicant indexing: userIndex "0" = applicant, "1"/"2" = co-applicants
+(maps to coApplicantArray[].index).
+
+
+CUSTOMER DATA — SYNTHETIC & CONSISTENT ACROSS ALL SYSTEMS
+---------------------------------------------------------
+
+Customer information is generated synthetically by the Engine — not hardcoded
+from sample files.
+
+At journey start we create one canonical profile per applicant/co-applicant:
+
+  Profile (examples): name, PAN, DOB, gender, address, pinCode, state, email,
+  mobile, employer, loan amount
+
+This single profile is injected into every producer system for that person:
+
+  Same PAN, name, DOB, address  →  mbCibil, mbEquifax, mbHighMark, perfios,
+                                    posidex, hunter
+
+Example: if we generate PAN "ABCDE1234F" for userIndex "0", that exact PAN
+appears in CIBIL ID_NUMBER, Perfios pan, Posidex match fields, etc.
+
+Initiate request may supply some customer fields; the Engine can use them or
+fill gaps with generated values — but once set, the profile is frozen for
+that journey and reused everywhere.
+
+System-specific IDs stay unique per table; customer identity does not change.
+
+
+HOW WE WILL GENERATE DATA (PER SUBSYSTEM)
+-----------------------------------------
+
+Approach: Template + Profile + Scenario
+
+  - Templates  = sample JSON files (structure only, values replaced)
+  - Profile    = one consistent customer identity per userIndex
+  - Scenario   = rules for scores, matches, failures (configurable)
+
+Generation steps per Initiate request:
+
+  1. Accept request; create journey record
+  2. Generate journey IDs (orcJourneyID) and return ACK
+  3. Build synthetic customer profile(s) for applicant + co-applicants
+  4. Generate system-level IDs (MB, Perfios, Posidex, etc.)
+  5. For each system in productDetails, build callback payload:
+       - Copy template structure from sample file
+       - Inject customer profile (name, PAN, DOB, address, ...)
+       - Apply scenario (credit score, fraud rules, Posidex matches, ...)
+       - Attach contextParameter + reportType wrapper
+  6. Persist all records (journey profile + each subsystem payload)
+  7. Send callbacks async; build Summary from actual outcomes
+
+Per-system content (synthetic fields beyond customer profile):
+
+  mbCibil      Credit score, tradelines, enquiry history, SUBJECT_RETURN_CODE
+  mbEquifax    Bureau response or "Consumer record not found"
+  mbHighMark   Report ID, account summaries, inquiry details
+  mbMbEot      End-of-txn flags (which bureaus were queried)
+  perfios      Salary, balances, monthly summary; optionally full Xns/EOD
+  posidex      outputdata[] match rows (0..N), SOA_STATUS_C, match parameters
+  hunter       MatchSummary, Rules[], TotalMatchScore, Scheme scores
+  summary      Derived from steps above — not independently hardcoded
+
+Data is stored so records can be fetched by:
+  - Journey ID  (orcJourneyID / partnerJourneyID / bankJourneyID)
+  - System ID   (e.g. TRACKING-ID, perfiosTransactionId, SOA_APP_ID_C)
+
+Optional test scenarios (pending confirmation):
+  clean approval | thin file | bureau not found | Posidex match | fraud hit
+
+
+ASSUMPTIONS (PLEASE CONFIRM OR CORRECT)
+---------------------------------------
+
+  - Customer profile generated once per userIndex; same identity across all
+    producer systems for that journey
+  - Sample files define JSON structure; values are synthetic, not copied as-is
+  - Perfios sample lacks contextParameter wrapper; we will add it per
+    Requirement_MockAPI.txt
+  - Systems listed in productDetails receive callbacks; others = "Not Opted"
+    in Summary
+  - mbMbEot sent after bureau callbacks; SENT-TO-* flags reflect bureaus invoked
+  - Async think time ~2 minutes, configurable
+  - mbMergedScore / mbExperian / mbCriflite in Summary only — no sample
+    callbacks provided
+
+
+QUESTIONS FOR CLIENT
+--------------------
+
+Integration
+  1. Exact API endpoint and HTTP method for Initiate Journey?
+  2. Callbacks pushed to Partner (webhook) or pulled by Partner?
+  3. Callback URL — in request or pre-configured per partner/channel?
+  4. Authentication required (API key, OAuth, mTLS)?
+
+Callbacks & timing
+  5. Is 2-minute delay fixed or configurable (global / per request)?
+  6. Callbacks in parallel or fixed order (bureaus → EOT → summary)?
+  7. Retry if Partner callback endpoint is unreachable?
+
+Subsystem scope
+  8. If multibureau present, always send all four (CIBIL, Equifax, HighMark,
+     EOT)?
+  9. mbMergedScore / mbExperian / mbCriflite — separate callbacks or Summary only?
+  10. Partial journeys allowed (e.g. Perfios + Hunter only)?
+
+IDs & correlation
+  11. Format/rule for generating orcJourneyID?
+  12. MB APPLICATION-ID / CUST-ID — generated fresh or mapped from input?
+  13. Default Posidex — 0 matches, 1 match, or configurable?
+  14. Combined callback for all co-applicants (as samples) or one per userIndex?
+
+Synthetic data & customer profile
+  15. If request includes customer fields (name, PAN), use as-is or always
+      generate (request as optional override only)?
+  16. Predefined test scenarios needed, or one default success path enough?
+  17. Validations on generated data (PAN format, pinCode-state consistency)?
+  18. Perfios — full Xns/EODBalances required, or SummaryInfo enough for POC?
+  19. Hunter — what TotalMatchScore / rules mean pass vs fail?
+
+Failures
+  20. Can one subsystem callback fail while others succeed?
+  21. Must partnerJourneyID be unique across requests?
+
+Please review and let us know what we got wrong or what we missed.

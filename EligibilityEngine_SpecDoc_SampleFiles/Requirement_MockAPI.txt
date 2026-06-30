@@ -1,0 +1,29 @@
+Requirements for a Mock API Response generator with multiple callbacks.
+
+1. There are 2 systems- Partner who initiates the request and Producer which responds with Acknowledgement and callbacks.
+2. Partner initiates a request with json format as file "EE- initiate request V1.0" and receives a immediate mock response in json as file "EE - Intiate Journey ACK resp" for Acknowledgement.
+3. Request JSON contains information regarding productDetails like posidex, multibureau, hunter and perfios for which callbacks are to be returned in async. Think time can be set to 2 minutes for callback.
+4. Callback formats for producer systems are as below.
+
+
+5. Callback from Producer system should be synthetically generated maintaining the suggested json format as per below files. 
+
+a. mbCibil Sample Callback
+b. mbEquifax Sample Callback
+c. mbHighMark Sample Callback
+d. mbMbEot Sample Callback
+e. perfios Sample Callback
+f. posidex Sample Callback
+g. summary Sample Callback
+
+6. Callback JSON should contain "contextParameter" and "reportType" to trace these to the request.
+
+  "contextParameter": {
+    "partnerJourneyID": "1234556789",
+    "bankJourneyID": "1234556789",
+    "orcJourneyID": "WF-_9348b08f-cf6f-4002-9568-1cf8ae1d81be51314212199806",
+    "partnerID": "HDFCBANK",
+    "channelID": "CHANNEL_FYNDNA_HL1",
+    "productName": "FYNDNA_HL1"
+  }
+
