@@ -229,7 +229,7 @@ flowchart TB
 ## 6. Software Component Map
 
 ```
-HDFC_Bank_POC/
+SDG-API/
 ├── EligibilityEngine_SpecDoc_SampleFiles/   # Authoritative JSON samples
 ├── data/
 │   ├── templates/                           # Copied spec templates for fillers
@@ -276,15 +276,15 @@ Two independent deployments share generator code but serve different use cases.
 flowchart TB
     subgraph OCP["OpenShift Cluster"]
         subgraph Demo["Demo App"]
-            RD["Route: hdfc-eligibility-engine"]
+            RD["Route: sdg-eligibility-engine"]
             DD["Deployment + Image\n50 records baked in"]
         end
         subgraph Live["Live App"]
-            RL["Route: hdfc-eligibility-live"]
+            RL["Route: sdg-eligibility-live"]
             DL["Deployment + PVC\n/data/records/"]
         end
-        BC1["BuildConfig: hdfc-eligibility-engine"]
-        BC2["BuildConfig: hdfc-eligibility-live"]
+        BC1["BuildConfig: sdg-eligibility-engine"]
+        BC2["BuildConfig: sdg-eligibility-live"]
     end
 
     User1[Client demo] --> RD --> DD
@@ -300,8 +300,7 @@ flowchart TB
 
 **Live URLs (sandbox example):**
 
-- Demo: `https://hdfc-eligibility-engine-default.apps.ocp.8v2x7.sandbox1891.opentlc.com`
-- Live: `https://hdfc-eligibility-live-default.apps.ocp.8v2x7.sandbox1891.opentlc.com`
+- Demo / Live: use `oc get route sdg-eligibility-engine` or `sdg-eligibility-live` after deploy
 
 **Local run:**
 
@@ -361,8 +360,8 @@ Selected in the Live UI before **Build EE Request**; passed through to callback 
 | Document | Location |
 |----------|----------|
 | Client Q&A / understanding | `docs/EligibilityEngine_Understanding_and_Client_Questions.txt` |
-| Field schemas | `.cursor/skills/hdfc-eligibility-engine/schemas.md` |
-| Generator → spec mappings | `.cursor/skills/hdfc-eligibility-engine/mappings.md` |
+| Field schemas | `.cursor/skills/sdg-eligibility-engine/schemas.md` |
+| Generator → spec mappings | `.cursor/skills/sdg-eligibility-engine/mappings.md` |
 | OpenShift deploy (demo) | `openshift/README.md` |
 | OpenShift deploy (live) | `openshift/README-live.md` |
 | Agent entry point | `AGENTS.md` |

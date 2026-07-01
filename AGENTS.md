@@ -2,9 +2,11 @@
 
 Synthetic data tool + mock Producer API for loan eligibility testing.
 
+**Run end-to-end:** see [`README.md`](README.md) (Quick Start + four workflows).
+
 ## Start here
 
-All instructions live in `.cursor/skills/hdfc-eligibility-engine/`:
+All instructions live in `.cursor/skills/sdg-eligibility-engine/`:
 
 | File | Contents |
 |------|----------|

@@ -126,7 +126,14 @@ def _identity_table(pdf: FPDF) -> None:
 
 def build_pdf() -> Path:
     direct_curl = _build_direct_curl()
-    CURL_SH.write_text("#!/bin/bash\n" + direct_curl + "\n", encoding="utf-8")
+    sh_content = (
+        "#!/bin/bash\n"
+        f"# Override host: BASE_URL=https://your-route.example.com bash {CURL_SH.name}\n"
+        f'BASE_URL="${{BASE_URL:-{BASE}}}"\n'
+        + direct_curl.replace(f'curl -X POST "{POST_URL}"', 'curl -X POST "${BASE_URL}/api/eligibility/generate-callbacks?scenario=clean-approval"')
+        + "\n"
+    )
+    CURL_SH.write_text(sh_content, encoding="utf-8")
     CURL_SH.chmod(0o755)
 
     pdf = SnapshotPDF()

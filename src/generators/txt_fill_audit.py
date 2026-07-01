@@ -8,7 +8,7 @@ from .json_utils import get_path
 from .nonempty_filler import collect_all_nonempty_paths
 from .spec_templates import load_spec_callback
 
-# Known HDFC sample literals that must never appear in generated output.
+# Known spec sample literals that must never appear in generated output.
 SAMPLE_LITERAL_BLOCKLIST = (
     "NABANITA PAL",
     "NIKUNJ KUMAR AND CO",

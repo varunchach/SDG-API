@@ -1,9 +1,9 @@
 ---
-name: hdfc-eligibility-engine
+name: sdg-eligibility-engine
 description: >-
-  HDFC Eligibility Engine mock producer — schemas, constraints, field mappings,
+  SDG Eligibility Engine mock producer — schemas, constraints, field mappings,
   Faker generators. Use for initiate/callback payloads, MB, Perfios, Posidex,
-  Hunter, or API work in HDFC_Bank_POC.
+  Hunter, or API work in SDG-API.
 ---
 
 # Eligibility Engine — Mock Producer
@@ -50,7 +50,7 @@ Build synthetic data with **one consistent fake customer** across all systems.
 ```
 EligibilityEngine_SpecDoc_SampleFiles/   # copy as templates
 ACE BRE Generic API Spec.pdf
-.cursor/skills/hdfc-eligibility-engine/  # this skill
+.cursor/skills/sdg-eligibility-engine/  # this skill
 src/generators/                          # Faker code
 scripts/generate_customers.py
 data/scenarios/                          # behaviour overrides
@@ -58,47 +58,20 @@ data/generated/                          # output (gitignored; run generate scri
 docs/                                    # client Q&A doc
 ```
 
-## Build phases
-
-| Phase | Status | Deliverable |
-|-------|--------|-------------|
-| 1a | Done | 100 customers — internal `profile`/`journey`/`systemIds` |
-| 1b | Next | `initiateRequest` + `ackResponse` in spec format |
-| 1c | Pending | Callback templates + filler → full `callbacks` object |
-| 2 | Pending | Persist & fetch by journey/system ID |
-| 3 | Pending | API: Initiate → ACK → async callbacks (~2min) → Summary |
-
-## Generation flow
-
-```
-scenario → Faker identity → system IDs → fill spec template → validate constraints
-```
-
-**Consistency:** Same `panNo`, name, DOB, address in initiate + all callbacks.
-Journey IDs in ACK `data` and every `contextParameter`.
-
-## Producer map
-
-| `productDetails` key | Callbacks (`reportType`) |
-|----------------------|--------------------------|
-| `multibureau` | mbCibil, mbEquifax, mbHighMark, mbMbEot |
-| `perfios` | perfios |
-| `posidex` | posidex |
-| `hunter` | hunter |
-| always | summary |
-
-## Quick start
+## Run
 
 ```bash
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python scripts/generate_customers.py -n 100 --seed 42
 ```
 
-## Hard rules
+Output: `data/generated/` (gitignored)
 
-- Copy spec sample JSON **verbatim** — all keys, no renames
-- Spec names: `panNo`, `fName`, `APPLICATION-ID` (not `pan`, `firstName`)
-- Initiate: **no** `orcJourneyID`; ACK + callbacks: **yes**
-- Perfios: wrap raw sample body with callback envelope
-- Summary: derive statuses; `"Not Opted"` if system absent in input
-- Scenarios change behaviour only — never identity fields
+## Phases
+
+| Phase | Status |
+|-------|--------|
+| 1a | Done — generators + 100 records |
+| 1b | Next — spec-format initiate + ACK |
+| 1c | Pending — callback templates + filler |
+| 2–3 | Pending — storage + API |

@@ -229,7 +229,7 @@ def _resolve_structural(field: str, path: str, sample: str, ctx: FillContext) ->
     if field == "MEMBER_NAME":
         if "BANK" in sample.upper() or "LTD" in sample.upper():
             return sample
-        return "HDFC BANK LTD"
+        return "NATIONAL BANK LTD"
     if field in {
         "ERRORCODE",
         "OUTPUT_WRITE_FLAG",
@@ -422,7 +422,7 @@ def _resolve_bureau_domain(field: str, path: str, sample: str, ctx: FillContext)
         return f"PRB{_numeric_like('0000000', ctx, path)}"
     if field == "REPORT_ID":
         dt = _today(ctx).strftime("%y%m%d")
-        return f"HDFC{dt}CR{_numeric_like('0000000', ctx, path)}"
+        return f"SDG{dt}CR{_numeric_like('0000000', ctx, path)}"
     if field == "BATCH_ID":
         return _numeric_like(sample, ctx, path)
     if field == "BRANCH_IQ":
